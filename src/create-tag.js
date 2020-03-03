@@ -2,7 +2,7 @@ function isFunction(object) {
   return typeof object === 'function';
 }
 
-function newTemplateTag(onResult = null, onValue = null) {
+function createTag(onResult = null, onValue = null) {
   onValue = isFunction(onValue) ? onValue : (v) => v;
   onResult = isFunction(onResult) ? onResult : (r) => r;
 
@@ -20,4 +20,4 @@ function newTemplateTag(onResult = null, onValue = null) {
   }
 }
 
-module.exports = newTemplateTag;
+module.exports = createTag;

@@ -1,4 +1,4 @@
-var { createTag, log } = require('../utils');
+var { createTag } = require('../create-tag');
 
 // String Manipulation
 
@@ -7,10 +7,12 @@ var squish = createTag(
   result => result.trim().replace(/[\n\r\s]+/g, ' ')
 );
 
-log(
+console.log(
   squish`
     a
     b
     c
   `
 );
+
+// Formatting Numbers

@@ -1,28 +1,8 @@
-var { log } = require('../utils');
-
-const promise = (strings, ...promises) => {
-  let p = new Promise((resolve, reject) => {
-    Promise.all(promises).then(values => {
-      let result = '';
-
-      strings.forEach((string, index) => {
-        result += string;
-
-        if (index < values.length) {
-          let value = values[index];
-
-          result += value;
-        }
-      });
-
-      resolve(result);
-    }, reject);
-  });
-
-  return p;
-};
+var { createPromiseTag } = require('../create-tag');
 
 // Promise Strings
+
+var promise = createPromiseTag();
 
 var p = promise`
   ${1}

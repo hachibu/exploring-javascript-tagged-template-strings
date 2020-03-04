@@ -1,4 +1,4 @@
-var { createTag, log } = require('../utils');
+var { createTag } = require('../create-tag');
 
 var template = require('@babel/template'),
     generate = require('@babel/generator').default,
@@ -11,7 +11,7 @@ var ast = createTag(
   result => template.smart.ast(result)
 );
 
-log(
+console.log(
   ast`
     1 * 2 ** 4
   `

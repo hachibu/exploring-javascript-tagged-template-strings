@@ -1,5 +1,9 @@
 # Examples
 
+## Basics
+
+- Noop
+
 ## String Manipulation
 
 - Squishing Strings

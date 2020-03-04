@@ -1,5 +1,3 @@
-# Sturdy Dollop
-
 ## Outline
 
 - Introduction
@@ -29,7 +27,9 @@
 
 ### 3. Domain Specific Languages
 
-  - ...
+  - GraphQL
+  - HTML to DOM
+  - Markdown to DOM
 
 ### 4. Source Code Manipulation
 

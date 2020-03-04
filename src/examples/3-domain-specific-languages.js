@@ -1,24 +1,44 @@
 var { createTag } = require('../create-tag');
 
-var marked = require('marked');
+var gql    = require('graphql-tag'),
+    JSDOM  = require('jsdom').JSDOM,
+    marked = require('marked');
 
-// - Regular Expressions
-// - GraphQL Queries
-// - HTML -> DOM
-// - HTML -> Virtual Dom
-// - Embedded Languages (e.g. Lisp)
+// GraphQL
+console.log(
+  gql`{
+    user(id: 0) {
+      name
+    }
+  }`
+);
 
-// Markdown To DOM
-var md = createTag(marked.parse);
+// HTML to DOM
+var html2dom = createTag(
+  result => new JSDOM(result)
+);
 
 console.log(
-  md`
+  html2dom`
+    <ul>
+      <li>Apples</li>
+      <li>Oranges</li>
+    </ul>
+  `.window.document.querySelector('body').innerHTML
+);
+
+// Markdown to DOM
+var md2dom = createTag(
+  result => new JSDOM(marked.parse(result))
+);
+
+console.log(
+  md2dom`
   # Shopping List
 
   - Apples
   - Oranges
-  `
+  `.window.document.querySelector('body').innerHTML
 );
 
-// DOM
-// dom`<li>`
+// Languages (Lisp, etc.)

@@ -1,12 +1,16 @@
-var { createTag, isFunction } = require('./util');
+var { createTag } = require('./utils');
+
+// DSL
+// - regular expressions
+// - GraphQL Queries
+// - Markdown
+// - HTML
+// - SASS
+// - JSX
+// - dom
+// - Embedded Languages (e.g. Lisp)
 
 var parsers = {
-  ast: [
-    require('@babel/template').default.ast
-  ],
-  squish: [
-    (result) => result.replace(/[\n\r\s]+/g, ' ').trim()
-  ],
   md: [
     (result) => require('marked').parse(result.trim())
   ],

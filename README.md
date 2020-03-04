@@ -25,11 +25,12 @@
   - Squishing Strings
   - Trimming Indentation
 
-### 3. Domain Specific Languages
+### 3. Embedding Languages
 
   - GraphQL
   - HTML to DOM
   - Markdown to DOM
+  - ClojureScript
 
 ### 4. Source Code Manipulation
 

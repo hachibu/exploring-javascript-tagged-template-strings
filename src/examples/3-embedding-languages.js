@@ -1,6 +1,7 @@
 var { createTag } = require('../create-tag');
 
-var gql    = require('graphql-tag'),
+var cljs   = require('clojurescript'),
+    gql    = require('graphql-tag'),
     JSDOM  = require('jsdom').JSDOM,
     marked = require('marked');
 
@@ -41,4 +42,10 @@ console.log(
   `.window.document.querySelector('body').innerHTML
 );
 
-// Languages (Lisp, etc.)
+// ClojureScript
+var cs = createTag(cljs.eval);
+var f = cs`(fn [name] (str "Hello " name "!"))`
+
+console.log(
+  f('ClojureScript')
+);

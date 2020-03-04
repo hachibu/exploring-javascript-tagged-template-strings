@@ -7,7 +7,7 @@
 - Body
   * From simple to complex to wacky, show how template strings can be used to:
     - manipulate strings.
-    - embed Domain Specific Languages.
+    - embed Domain Specific Languages and other Programming Languages.
     - inspect Abstract Syntax Trees and generate code.
     - do wacky things like implement async Promise strings.
 
@@ -32,7 +32,7 @@
   - Markdown to DOM
   - ClojureScript
 
-### 4. [Source Code Manipulation](/src/examples/4-source-code-manipulation.js)
+### 4. [Metaprogramming](/src/examples/4-metaprogramming.js)
 
   - AST Inspection
   - Quasiquotes or Code Generation

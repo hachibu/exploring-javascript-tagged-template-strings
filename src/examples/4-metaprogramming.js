@@ -4,8 +4,6 @@ var template = require('@babel/template'),
     generate = require('@babel/generator').default,
     types    = require('@babel/types');
 
-// Source Code Manipulation
-
 // AST Inspection
 var ast = createTag(
   result => template.smart.ast(result)

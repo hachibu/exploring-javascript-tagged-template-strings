@@ -1,12 +1,11 @@
 {
-  "name": "talk",
+  "name": "...",
+  "private": true,
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "7.8.6",
-    "cheerio": "1.0.0-rc.3",
     "lodash": "4.17.15",
-    "marked": "0.8.0",
-    "paredit.js": "0.3.6"
+    "marked": "0.8.0"
   }
 }

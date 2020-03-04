@@ -1,15 +1,24 @@
 var { createTag } = require('../create-tag');
 
-// Domain Specific Languages
-// - regular expressions
+var marked = require('marked');
+
+// - Regular Expressions
 // - GraphQL Queries
-// - Markdown
-// - HTML
-// - SASS
-// - JSX
-// - dom
+// - HTML -> DOM
+// - HTML -> Virtual Dom
 // - Embedded Languages (e.g. Lisp)
 
-// require('marked').parse(result.trim())
-// require('cheerio')
-// require('paredit.js').reader.readSexp
+// Markdown
+var md = createTag(marked.parse);
+
+console.log(
+  md`
+  # Shopping List
+
+  - Apples
+  - Oranges
+  `
+);
+
+// DOM
+// dom`<li>`

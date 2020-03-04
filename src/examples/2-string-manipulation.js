@@ -2,8 +2,6 @@ var { createTag } = require('../create-tag');
 
 var _ = require('lodash');
 
-// String Manipulation
-
 // Squishing Strings
 var squish = createTag(
   result => result.trim().replace(/[\n\r\s]+/g, ' ')

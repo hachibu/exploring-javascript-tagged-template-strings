@@ -1,23 +1,23 @@
 # Examples
 
-## Basics
+## 1. Basics
 
-- Noop
+  - Noop
 
-## String Manipulation
+## 2. String Manipulation
 
-- Squishing Strings
-- Trimming Indentation
+  - Squishing Strings
+  - Trimming Indentation
 
-## Source Code Manipulation
+## 3. Domain Specific Languages
 
-- AST Inspection
-- Quasiquotes or Code Generation
+  - Markdown
 
-## Domain Specific Languages
+## 4. Source Code Manipulation
 
-- Markdown
+  - AST Inspection
+  - Quasiquotes or Code Generation
 
-## Party Tricks
+## 5. Party Tricks
 
-- Promise String
+  - Promise String

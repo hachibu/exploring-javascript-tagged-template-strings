@@ -8,7 +8,7 @@ var marked = require('marked');
 // - HTML -> Virtual Dom
 // - Embedded Languages (e.g. Lisp)
 
-// Markdown
+// Markdown To DOM
 var md = createTag(marked.parse);
 
 console.log(

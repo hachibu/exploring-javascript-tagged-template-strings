@@ -1,13 +1,13 @@
 var { createPromiseTag } = require('../create-tag');
 
-// Promise Strings
+// Promise String
+var p = createPromiseTag();
 
-var promise = createPromiseTag();
+var add = (x, y) =>
+  new Promise(resolve =>
+    setTimeout(() => resolve(x + y), 1000))
 
-var p = promise`
-  ${1}
-  ${new Promise((resolve) => resolve(2))}
-  ${new Promise((resolve) => setTimeout(() => resolve(3), 2000))}
-`;
+var x = 1,
+    y = 2;
 
-p.then(console.log);
+p`${x} + ${y} = ${add(x, y)}`.then(console.log);

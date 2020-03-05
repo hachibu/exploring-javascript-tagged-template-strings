@@ -9,7 +9,7 @@ var cljs   = require('clojurescript'),
 // GraphQL
 console.log(
   gql`{
-    user(id: 0) {
+    users {
       name
     }
   }`

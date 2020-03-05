@@ -1,18 +1,18 @@
-## Outline
+# Exploring JavaScript Template Tags
 
 - Introduction
-  * Introduce template strings and show a basic example of how to write a tag
-    and really drive home the point of how easy it is to write one.
+  * Introduce template strings and template tag functions. Walk through a basic
+    example of how to write a template tag function and show how easy it is.
 
 - Body
-  * From simple to complex to wacky, show how template strings can be used to:
+  * Show how template tag functions can be used to:
     - manipulate strings.
-    - embed Domain Specific Languages and other Programming Languages.
-    - inspect Abstract Syntax Trees and generate code.
-    - do wacky things like implement async Promise strings.
+    - embed Domain Specific Languages and Programming Languages.
+    - inspect Abstract Syntax Trees and do Metaprogramming.
+    - do far-out things like implement asynchronous Promise strings.
 
 - Conclusion
-  * Wrap it up and share social media and website.
+  * Wrap up talk with some closing thoughts and share social media and website.
 
 ## Examples
 
@@ -30,6 +30,7 @@
   - GraphQL
   - HTML to DOM
   - Markdown to DOM
+  - Shell Backticks
   - ClojureScript
 
 ### 4. [Metaprogramming](/src/examples/4-metaprogramming.js)
@@ -37,10 +38,6 @@
   - AST Inspection
   - Quasiquotes or Code Generation
 
-### 5. [Async](/src/examples/5-async.js)
+### 5. [Asynchronous Programming](/src/examples/5-async.js)
 
   - Promise String
-
-### 6. [Systems Programming](/src/examples/6-systems-programming.js)
-
-  - Shell Backticks

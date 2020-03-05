@@ -1,8 +1,6 @@
 {
-  "name": "sturdy-dollop",
+  "name": "Exploring JavaScript Template Tags",
   "private": true,
-  "version": "1.0.0",
-  "license": "MIT",
   "dependencies": {
     "@babel/core": "7.8.6",
     "clojurescript": "0.0.11",

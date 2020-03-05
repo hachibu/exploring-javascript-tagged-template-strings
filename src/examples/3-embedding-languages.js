@@ -3,7 +3,8 @@ var { createTag } = require('../create-tag');
 var cljs   = require('clojurescript'),
     gql    = require('graphql-tag'),
     JSDOM  = require('jsdom').JSDOM,
-    marked = require('marked');
+    marked = require('marked'),
+    shell  = require('shelljs');
 
 // GraphQL
 console.log(
@@ -40,6 +41,15 @@ console.log(
   - Apples
   - Oranges
   `.window.document.querySelector('body').innerHTML
+);
+
+// Shell
+var sh = createTag(
+  result => shell.exec(result, { silent: true })
+);
+
+console.log(
+  sh`ls -l`.stdout
 );
 
 // ClojureScript

@@ -40,3 +40,7 @@
 ### 5. [Async](/src/examples/5-async.js)
 
   - Promise String
+
+### 6. [Systems Programming](/src/examples/6-systems-programming.js)
+
+  - Shell Backticks

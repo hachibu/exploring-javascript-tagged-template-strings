@@ -4,7 +4,7 @@ var _ = require('lodash');
 
 // Squishing Strings
 var squish = createTag(
-  result => result.trim().replace(/[\n\r\s]+/g, ' ')
+  result => result.trim().replace(/\s+/g, ' ')
 );
 
 console.log(

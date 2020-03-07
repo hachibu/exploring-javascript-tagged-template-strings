@@ -1,5 +1,5 @@
 {
-  "name": "Exploring JavaScript Template Tags",
+  "name": "exploring-javascript-template-tags",
   "private": true,
   "dependencies": {
     "@babel/core": "7.8.6",

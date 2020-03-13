@@ -1,24 +1,5 @@
 # Exploring JavaScript Template Tags
 
-### Introduction
-
-* Introduce template strings and template tag functions.
-* Walk through a [basic example](#1-basics) of how to write a template tag and
-  show how easy it is to write one.
-
-### Body
-
-* Show [examples](#examples) of how template tags can be used:
-  - to manipulate strings.
-  - to embed other languages.
-  - for metaprogramming.
-  - to implement far-out ideas like asynchronous Promise strings.
-
-### Conclusion
-
-* Wrap up talk with a few closing remarks.
-* Share social media and website.
-
 ## Examples
 
 ### 1. [Basics](/src/examples/1-basics.js)

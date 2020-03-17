@@ -1,7 +1,12 @@
-% Exploring JavaScript Template Tags
-% Raymond Sohn
-% May 6, 2020
+---
+title: Exploring JavaScript Template Tags
+date: May 6, 2020
+author: Raymond Sohn
+---
 
 # Introduction
 
-Hello
+```js
+function() {
+}
+```

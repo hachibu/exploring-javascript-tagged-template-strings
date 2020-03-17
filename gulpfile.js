@@ -31,6 +31,9 @@ gulp.task('build:slides', gulp.parallel(
   'build:slides.md',
 ));
 
+gulp.task('watch', () =>
+  gulp.watch(['src/slides.md'], gulp.task('default')));
+
 gulp.task('default', gulp.series(
   'clean:docs',
   'build:slides'

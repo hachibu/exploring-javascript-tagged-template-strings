@@ -8,7 +8,7 @@ gulp.task('clean:docs', () =>
 
 gulp.task('build:reveal.js', () =>
   gulp.
-    src('node_modules/reveal.js/{css,js,plugin}/**/*.{css,js,html}').
+    src('node_modules/reveal.js/{css,js,plugin}/**/*.{css,js}').
     pipe(gulp.dest('docs/reveal.js')))
 
 gulp.task('build:slides.md', () => {

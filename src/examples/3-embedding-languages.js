@@ -1,4 +1,4 @@
-var { createTag } = require('../create-tag');
+var { createTag } = require('./create-tag');
 
 var cljs   = require('clojurescript'),
     gql    = require('graphql-tag'),

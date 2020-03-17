@@ -1,4 +1,4 @@
-var { createPromiseTag } = require('../create-tag');
+var { createPromiseTag } = require('./create-tag');
 
 // Promise String
 var p = createPromiseTag();

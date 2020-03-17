@@ -1,4 +1,4 @@
-var { createTag } = require('../create-tag');
+var { createTag } = require('./create-tag');
 
 var template = require('@babel/template'),
     generate = require('@babel/generator').default,

@@ -1,4 +1,4 @@
-var { createTag } = require('../create-tag');
+var { createTag } = require('./create-tag');
 
 var _ = require('lodash');
 

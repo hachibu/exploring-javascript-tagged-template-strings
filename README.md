@@ -27,3 +27,9 @@
 ### 5. [Asynchronous Programming](/src/examples/5-async.js)
 
   - Promise String
+
+## Build Slides [wip]
+
+    yarn
+    yarn build:slides
+    open docs/index.html

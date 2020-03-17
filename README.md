@@ -1,6 +1,12 @@
 # Exploring JavaScript Template Tags
 
-[Slides](https://hachibu.github.io/exploring-javascript-template-tags/)
+[Slides & Script](https://hachibu.github.io/exploring-javascript-template-tags/)
+
+## Build Talk
+
+    yarn
+    yarn build:talk
+    open docs/index.html
 
 ## Examples
 
@@ -29,15 +35,3 @@
 ### 5. [Asynchronous Programming](/src/examples/5-async.js)
 
   - Promise String
-
-## Slides
-
-### Build
-
-    yarn
-    yarn build:slides
-    open docs/index.html
-
-### Watch
-
-    yarn watch:slides

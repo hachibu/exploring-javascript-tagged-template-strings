@@ -19,7 +19,6 @@
     "reveal.js": "3.9.2"
   },
   "scripts": {
-    "build:slides": "gulp",
-    "watch:slides": "gulp watch"
+    "build:talk": "gulp"
   }
 }

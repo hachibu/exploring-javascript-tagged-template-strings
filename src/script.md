@@ -1,11 +1,3 @@
-# Introduction
+# Slide 1
 
-...
-
-# Body
-
-...
-
-# Conclusion
-
-...
+Introduction

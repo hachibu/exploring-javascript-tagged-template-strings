@@ -7,6 +7,6 @@ author: Raymond Sohn
 # Introduction
 
 ```js
-function() {
+function tag(strings, ...values) {
 }
 ```

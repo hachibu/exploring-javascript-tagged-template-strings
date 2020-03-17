@@ -19,6 +19,6 @@
     "reveal.js": "3.9.2"
   },
   "scripts": {
-    "build:talk": "gulp"
+    "build": "gulp"
   }
 }

@@ -5,7 +5,7 @@
 ## Build Talk
 
     yarn
-    yarn build:talk
+    yarn build
     open docs/index.html
 
 ## Examples

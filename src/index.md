@@ -1,4 +1,4 @@
 # Exploring JavaScript Template Tags
 
-## [Slides](./slides.html)
+## [Slides](./slides/index.html)
 ## [Script](./script.html)

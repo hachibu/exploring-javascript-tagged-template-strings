@@ -7,7 +7,11 @@ const md2revealjs = gulpPandoc({
   from: 'markdown',
   to: 'revealjs',
   ext: '.html',
-  args: ['-s']
+  args: [
+    '-s',
+    '-c reveal.js/css/theme/white.css',
+    '--slide-level=2'
+  ]
 });
 
 const md2html = gulpPandoc({

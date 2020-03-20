@@ -101,13 +101,13 @@
   <h1 class="title">Exploring JavaScript Template Tags</h1>
 </section>
 
-<section>
 <section id="section" class="title-slide slide level1">
 <h1></h1>
 <p>What Are Tagged Template Strings?</p>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+
+<section id="section-1" class="title-slide slide level1">
+<h1></h1>
 <p>Take for example this GraphQL Tag.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">let</span> query <span class="op">=</span> gql<span class="vs">`{</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="vs">  users {</span></span>
@@ -118,8 +118,9 @@
 <p>Surprisingly, it doesn’t return a string!!!</p>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+
+<section id="section-2" class="title-slide slide level1">
+<h1></h1>
 <p>It returns a GraphQL syntax tree! What?</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1"></a>{</span>
 <span id="cb2-2"><a href="#cb2-2"></a>  <span class="dt">kind</span><span class="op">:</span> <span class="st">&#39;Document&#39;</span><span class="op">,</span></span>
@@ -132,8 +133,8 @@
 <span id="cb2-9"><a href="#cb2-9"></a>    }</span>
 <span id="cb2-10"><a href="#cb2-10"></a>  ]</span>
 <span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
-</section></section>
-<section>
+</section>
+
 <section id="section-3" class="title-slide slide level1">
 <h1></h1>
 <p>If you’re intimidated by the might of tagged template strings, don’t be! They are easy to grok!</p>
@@ -141,10 +142,12 @@
 <p>Tagged template strings are built out of 2 thing you already know about! Functions and template strings.</p>
 </div>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
+
+<section id="section-4" class="title-slide slide level1">
+<h1></h1>
+<p>The noop example is great because it establishes the simplest possible example, and thus gives a sense of the API shape and complexity.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">// A template tag that builds a template string</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">function</span> <span class="fu">buildTag</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">function</span> <span class="fu">noop</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
 <span id="cb3-3"><a href="#cb3-3"></a>  <span class="kw">let</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a>  <span class="co">// Append each string to the result.</span></span>
 <span id="cb3-5"><a href="#cb3-5"></a>  strings<span class="op">.</span><span class="fu">forEach</span>((string<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
@@ -157,17 +160,25 @@
 <span id="cb3-12"><a href="#cb3-12"></a>  <span class="cf">return</span> result<span class="op">;</span></span>
 <span id="cb3-13"><a href="#cb3-13"></a>}</span></code></pre></div>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a>buildTag<span class="vs">`Hello </span><span class="sc">${</span><span class="st">&#39;World&#39;</span><span class="sc">}</span><span class="vs">!`</span></span></code></pre></div>
+
+<section id="section-5" class="title-slide slide level1">
+<h1></h1>
+<p>So if we run the example from the last slide it behaves just like template string without a tag.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a>noop<span class="vs">`Hello </span><span class="sc">${</span><span class="st">&#39;World&#39;</span><span class="sc">}</span><span class="vs">!`</span></span></code></pre></div>
 <div class="fragment">
 <p>Output</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a><span class="st">&quot;Hello World!&quot;</span></span></code></pre></div>
 </div>
-</section></section>
+</section>
+
 <section id="section-6" class="title-slide slide level1">
 <h1></h1>
 <p>What else can we do with tagged template strings?</p>
+<ul>
+<li>I like the html2dom and md2dom examples because they feel very practical to use and solve problems folks see often.</li>
+<li>The shell one blew my mind – such a terse and interesting syntax!</li>
+<li>I like the async one because it demonstrates that the output of the template string can be very different (even async) from the input.</li>
+</ul>
 </section>
     </div>
   </div>

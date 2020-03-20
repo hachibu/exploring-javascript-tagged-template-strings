@@ -1,31 +1,22 @@
 ---
 title: Exploring JavaScript Template Tags
+author: Raymond Sohn
 ---
 
-#
+__What Are Tagged Template Strings?__
 
-What Are Tagged Template Strings?
+---
 
-#
-
-Take for example this GraphQL Tag.
+__GraphQL Tag__
 
 ```javascript
 let query = gql`{
   users {
     name
   }
-}`;
+}`
 ```
-
 <div class="fragment">
-Surprisingly, it doesn't return a string!!!
-</div>
-
-#
-
-It returns a GraphQL syntax tree! What?
-
 ```javascript
 {
   kind: 'Document',
@@ -39,24 +30,34 @@ It returns a GraphQL syntax tree! What?
   ]
 }
 ```
-
-#
-
-If you're intimidated by the might of tagged template strings, don't be! They
-are easy to grok!
-
-<div class="fragment">
-Tagged template strings are built out of 2 thing you already know about!
-Functions and template strings.
 </div>
 
-#
+---
 
-The noop example is great because it establishes the simplest possible example,
-and thus gives a sense of the API shape and complexity.
+__NOOP Tag 1.0__
 
 ```javascript
-// A template tag that builds a template string
+function noop(strings, ...values) {
+  console.log({ strings, values });
+}
+
+noop`Hello ${'World'}!`
+```
+
+<div class="fragment">
+```javascript
+{
+  strings: ['Hello', '!'],
+  values: ['World']
+}
+```
+</div>
+
+---
+
+__NOOP Tag 2.0__
+
+```javascript
 function noop(strings, ...values) {
   let result = '';
   // Append each string to the result.
@@ -69,30 +70,40 @@ function noop(strings, ...values) {
   });
   return result;
 }
-```
 
-#
-
-So if we run the example from the last slide it behaves just like template
-string without a tag.
-
-```javascript
 noop`Hello ${'World'}!`
 ```
 
 <div class="fragment">
-Output
 ```javascript
 "Hello World!"
 ```
 </div>
 
-#
+---
 
-What else can we do with tagged template strings?
+__What Else Can We Do with Tagged Template Strings?__
 
-- I like the html2dom and md2dom examples because they feel very practical to
-  use and solve problems folks see often.
-- The shell one blew my mind -- such a terse and interesting syntax!
-- I like the async one because it demonstrates that the output of the template
-  string can be very different (even async) from the input.
+<div class="fragment" style="text-align: left; padding: 0 3rem">
+Embedding Domain Specific Languages
+
+- Converting HTML to DOM.
+- Converting Markdown to DOM.
+- Executing Shell Commands with Backticks.
+</div>
+
+<div class="fragment" style="text-align: left; padding: 0 3rem">
+Metaprogramming
+
+- Inspecting Abstract Syntax Trees.
+</div>
+
+<div class="fragment" style="text-align: left; padding: 0 3rem">
+Asynchronous Programming
+
+- Promise Strings.
+</div>
+
+---
+
+__HTML to DOM Tag__

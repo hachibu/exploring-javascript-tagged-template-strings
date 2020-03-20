@@ -12,11 +12,7 @@ gulp.task('build:slides.md', () => {
     from: 'markdown',
     to: 'revealjs',
     ext: '.html',
-    args: [
-      '-s',
-      '-c reveal.js/css/theme/white.css',
-      '--slide-level=2'
-    ]
+    args: ['-s', '-c reveal.js/css/theme/white.css']
   });
 
   return gulp.

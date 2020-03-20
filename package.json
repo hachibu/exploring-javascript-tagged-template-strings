@@ -19,6 +19,7 @@
     "reveal.js": "3.9.2"
   },
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "watch": "gulp && gulp watch"
   }
 }

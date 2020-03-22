@@ -1,5 +1,7 @@
 # Exploring JavaScript Template Tags
 
+[![Build Status](https://travis-ci.com/hachibu/exploring-javascript-template-tags.svg?branch=master)](https://travis-ci.com/hachibu/exploring-javascript-template-tags)
+
 [Slides & Script](https://hachibu.github.io/exploring-javascript-template-tags/)
 
 ## Examples

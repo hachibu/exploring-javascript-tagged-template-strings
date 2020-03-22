@@ -34,11 +34,11 @@ let query = gql`{
 
 ---
 
-__NOOP Tag 1.0__
+__NOOP Tag V1__
 
 ```javascript
 function noop(strings, ...values) {
-  console.log({ strings, values });
+  return { strings, values };
 }
 
 noop`Hello ${'World'}!`
@@ -55,7 +55,7 @@ noop`Hello ${'World'}!`
 
 ---
 
-__NOOP Tag 2.0__
+__NOOP Tag V2__
 
 ```javascript
 function noop(strings, ...values) {

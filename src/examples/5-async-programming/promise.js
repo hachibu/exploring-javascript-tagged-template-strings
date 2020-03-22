@@ -14,6 +14,4 @@ function p(strings, ...promises) {
   return promise;
 }
 
-var add = (x, y) => new Promise(resolve => setTimeout(() => resolve(x + y), 500))
-
-p`1 + 2 = ${add(1, 2)}`.then(console.log);
+module.exports = p;

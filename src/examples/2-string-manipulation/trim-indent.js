@@ -19,12 +19,4 @@ var trimIndent = createTag(
   },
 );
 
-console.log(
-  trimIndent`
-    # Shopping List
-
-    - Apples
-      * Fuji
-    - Oranges
-  `
-);
+module.exports = trimIndent;

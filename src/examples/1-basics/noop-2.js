@@ -9,4 +9,4 @@ function noop(strings, ...values) {
   return result;
 }
 
-console.log(noop`Hello ${'World'}!`);
+module.exports = noop;

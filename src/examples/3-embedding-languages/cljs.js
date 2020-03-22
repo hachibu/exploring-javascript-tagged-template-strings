@@ -3,9 +3,4 @@ var createTag     = require('../create-tag'),
 
 var cljs = createTag(clojurescript.eval);
 
-var hello = cljs`(fn [name] (str "Hello " name "!"))`;
-
-console.log(
-  hello.toString() + "\n\n",
-  hello('ClojureScript')
-);
+module.exports = cljs;

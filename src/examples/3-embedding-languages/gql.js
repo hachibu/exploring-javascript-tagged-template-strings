@@ -1,10 +1,3 @@
-var createTag = require('../create-tag'),
-    gql       = require('graphql-tag');
+var gql = require('graphql-tag');
 
-console.log(
-  gql`{
-    users {
-      name
-    }
-  }`
-);
+module.exports = gql;

@@ -1,5 +1,5 @@
 function noop(strings, ...values) {
-  console.log({ strings, values });
+  return { strings, values };
 }
 
-noop`Hello ${'World'}!`
+module.exports = noop;

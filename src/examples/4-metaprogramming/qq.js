@@ -8,9 +8,4 @@ var qq = createTag(
   value  => generate(value).code
 );
 
-console.log(
-  qq`
-    const ENV = ${types.stringLiteral('development')};
-    const PORT = ${template.smart.ast('3000')}
-  `
-);
+module.exports = qq;

@@ -1,6 +1,12 @@
 {
   "name": "exploring-javascript-template-tags",
-  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://github.com/hachibu/exploring-javascript-template-tags#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hachibu/exploring-javascript-template-tags"
+  },
   "dependencies": {
     "@babel/core": "7.8.7",
     "clojurescript": "0.0.11",
@@ -12,6 +18,8 @@
     "shelljs": "0.8.3"
   },
   "devDependencies": {
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
     "del": "5.1.0",
     "gulp": "4.0.2",
     "gulp-pandoc": "0.2.2",

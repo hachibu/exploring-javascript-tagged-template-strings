@@ -5,21 +5,20 @@
 ## Build Talk
 
     yarn
-    yarn build
     open docs/index.html
 
 ## Examples
 
-### 1. [Basics](/src/examples/1-basics.js)
+### 1. [Basics](/src/examples/1-basics/)
 
   - Noop
 
-### 2. [String Manipulation](/src/examples/2-string-manipulation.js)
+### 2. [String Manipulation](/src/examples/2-string-manipulation/)
 
   - Squishing Strings
   - Trimming Indentation
 
-### 3. [Embedding Languages](/src/examples/3-embedding-languages.js)
+### 3. [Embedding Languages](/src/examples/3-embedding-languages/)
 
   - GraphQL
   - HTML to DOM
@@ -27,11 +26,11 @@
   - Shell Backticks
   - ClojureScript
 
-### 4. [Metaprogramming](/src/examples/4-metaprogramming.js)
+### 4. [Metaprogramming](/src/examples/4-metaprogramming/)
 
   - AST Inspection
   - Quasiquotes or Code Generation
 
-### 5. [Asynchronous Programming](/src/examples/5-async.js)
+### 5. [Asynchronous Programming](/src/examples/5-async-programming/)
 
   - Promise String

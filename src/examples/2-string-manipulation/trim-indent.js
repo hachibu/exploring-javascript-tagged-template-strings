@@ -1,21 +1,5 @@
-var { createTag } = require('./create-tag');
+var createTag = require('../create-tag');
 
-var _ = require('lodash');
-
-// Squishing Strings
-var squish = createTag(
-  result => result.trim().replace(/\s+/g, ' ')
-);
-
-console.log(
-  squish`
-    a
-    b
-    c
-  `
-);
-
-// Trimming Indentation
 var trimIndent = createTag(
   result => {
     let lines = result.split("\n");

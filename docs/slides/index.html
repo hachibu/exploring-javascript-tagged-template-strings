@@ -82,6 +82,7 @@
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
   <link rel="stylesheet" href=" reveal.js/css/theme/white.css"/>
+  <link rel="stylesheet" href=" reveal.js/css/custom.css"/>
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -105,11 +106,11 @@
 
 <section class="slide level6">
 
-<p><strong>What Are Tagged Template Strings?</strong></p>
+<p>What Are Tagged Template Strings?</p>
 </section>
 <section class="slide level6">
 
-<p><strong>GraphQL Tag</strong></p>
+<p>GraphQL Tag</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">let</span> query <span class="op">=</span> gql<span class="vs">`{</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="vs">  users {</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="vs">    name</span></span>
@@ -131,12 +132,12 @@
 </section>
 <section class="slide level6">
 
-<p><strong>NOOP Tag V1</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">function</span> <span class="fu">noop</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
+<p>Args Tag</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">function</span> <span class="fu">args</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
 <span id="cb3-2"><a href="#cb3-2"></a>  <span class="cf">return</span> { strings<span class="op">,</span> values }<span class="op">;</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>}</span>
 <span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a>noop<span class="vs">`Hello </span><span class="sc">${</span><span class="st">&#39;World&#39;</span><span class="sc">}</span><span class="vs">!`</span></span></code></pre></div>
+<span id="cb3-5"><a href="#cb3-5"></a>args<span class="vs">`Hello </span><span class="sc">${</span><span class="st">&#39;World&#39;</span><span class="sc">}</span><span class="vs">!`</span></span></code></pre></div>
 <div class="fragment">
 <div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a>{</span>
 <span id="cb4-2"><a href="#cb4-2"></a>  <span class="dt">strings</span><span class="op">:</span> [<span class="st">&#39;Hello&#39;</span><span class="op">,</span> <span class="st">&#39;!&#39;</span>]<span class="op">,</span></span>
@@ -146,7 +147,7 @@
 </section>
 <section class="slide level6">
 
-<p><strong>NOOP Tag V2</strong></p>
+<p>NOOP Tag</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">function</span> <span class="fu">noop</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="kw">let</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>  <span class="co">// Append each string to the result.</span></span>
@@ -167,8 +168,8 @@
 </section>
 <section class="slide level6">
 
-<p><strong>What Else Can We Do with Tagged Template Strings?</strong></p>
-<div class="fragment" style="text-align: left; padding: 0 3rem">
+<p>What Else Can We Do<br>With Tagged Template Strings?</p>
+<div class="fragment fragment--align-left">
 <p>Embedding Domain Specific Languages</p>
 <ul>
 <li>Converting HTML to DOM.</li>
@@ -176,13 +177,13 @@
 <li>Executing Shell Commands with Backticks.</li>
 </ul>
 </div>
-<div class="fragment" style="text-align: left; padding: 0 3rem">
+<div class="fragment fragment--align-left">
 <p>Metaprogramming</p>
 <ul>
 <li>Inspecting Abstract Syntax Trees.</li>
 </ul>
 </div>
-<div class="fragment" style="text-align: left; padding: 0 3rem">
+<div class="fragment fragment--align-left">
 <p>Asynchronous Programming</p>
 <ul>
 <li>Promise Strings.</li>
@@ -191,7 +192,7 @@
 </section>
 <section class="slide level6">
 
-<p><strong>HTML to DOM Tag</strong></p>
+<p>HTML to DOM Tag</p>
 </section>
     </div>
   </div>

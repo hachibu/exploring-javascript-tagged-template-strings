@@ -12,7 +12,11 @@ gulp.task('build:slides.md', () => {
     from: 'markdown',
     to: 'revealjs',
     ext: '.html',
-    args: ['-s', '-c reveal.js/css/theme/white.css']
+    args: [
+      '-s',
+      '-c reveal.js/css/theme/white.css',
+      '-c reveal.js/css/custom.css'
+    ]
   });
 
   return gulp.
@@ -35,8 +39,15 @@ gulp.task('build:html', () => {
     pipe(gulp.dest('docs'));
 });
 
+gulp.task('build:css', () => {
+  return gulp.
+    src('src/**/*.css').
+    pipe(gulp.dest('docs/slides'));
+});
+
 gulp.task('build', gulp.parallel(
   'build:reveal.js',
+  'build:css',
   'build:slides.md',
   'build:html'
 ));

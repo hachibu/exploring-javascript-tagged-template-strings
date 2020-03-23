@@ -3,11 +3,11 @@ title: Exploring JavaScript Template Tags
 author: Raymond Sohn
 ---
 
-__What Are Tagged Template Strings?__
+What Are Tagged Template Strings?
 
 ---
 
-__GraphQL Tag__
+GraphQL Tag
 
 ```javascript
 let query = gql`{
@@ -34,14 +34,14 @@ let query = gql`{
 
 ---
 
-__NOOP Tag V1__
+Args Tag
 
 ```javascript
-function noop(strings, ...values) {
+function args(strings, ...values) {
   return { strings, values };
 }
 
-noop`Hello ${'World'}!`
+args`Hello ${'World'}!`
 ```
 
 <div class="fragment">
@@ -55,7 +55,7 @@ noop`Hello ${'World'}!`
 
 ---
 
-__NOOP Tag V2__
+NOOP Tag
 
 ```javascript
 function noop(strings, ...values) {
@@ -82,9 +82,9 @@ noop`Hello ${'World'}!`
 
 ---
 
-__What Else Can We Do with Tagged Template Strings?__
+What Else Can We Do<br>With Tagged Template Strings?
 
-<div class="fragment" style="text-align: left; padding: 0 3rem">
+<div class="fragment fragment--align-left">
 Embedding Domain Specific Languages
 
 - Converting HTML to DOM.
@@ -92,13 +92,13 @@ Embedding Domain Specific Languages
 - Executing Shell Commands with Backticks.
 </div>
 
-<div class="fragment" style="text-align: left; padding: 0 3rem">
+<div class="fragment fragment--align-left">
 Metaprogramming
 
 - Inspecting Abstract Syntax Trees.
 </div>
 
-<div class="fragment" style="text-align: left; padding: 0 3rem">
+<div class="fragment fragment--align-left">
 Asynchronous Programming
 
 - Promise Strings.
@@ -106,4 +106,4 @@ Asynchronous Programming
 
 ---
 
-__HTML to DOM Tag__
+HTML to DOM Tag

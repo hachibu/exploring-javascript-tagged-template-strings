@@ -15,4 +15,5 @@
 ## Development
 
     yarn
+    yarn build
     open docs/index.html

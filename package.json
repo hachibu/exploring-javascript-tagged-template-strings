@@ -30,7 +30,6 @@
   },
   "scripts": {
     "build": "gulp",
-    "postinstall": "mocha && gulp",
     "test": "mocha",
     "watch": "gulp && gulp watch"
   }

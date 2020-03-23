@@ -16,7 +16,7 @@ gulp.task('build:slides.md', () => {
   });
 
   return gulp.
-    src('src/slides.md').
+    src('src/markdown/slides.md').
     pipe(md2revealjs).
     pipe(gulpRename('index.html')).
     pipe(gulp.dest('docs/slides'));
@@ -30,7 +30,7 @@ gulp.task('build:html', () => {
   });
 
   return gulp.
-    src('src/{index,script}.md').
+    src('src/markdown/{index,script}.md').
     pipe(md2html).
     pipe(gulp.dest('docs'));
 });

@@ -126,12 +126,11 @@ describe('../src/examples/4-metaprogramming/', function() {
   });
 
   it('qq', function() {
-    let template = require('@babel/template'),
-        types    = require('@babel/types');
+    let t = require('@babel/types');
 
     let result = this.tag`
-      const ENV = ${types.stringLiteral('development')};
-      const PORT = ${template.smart.ast('3000')}
+      const ENV = ${t.stringLiteral('development')};
+      const PORT = ${t.numericLiteral(3000)}
     `;
 
     result.should.equal('const ENV = "development";\nconst PORT = 3000;');

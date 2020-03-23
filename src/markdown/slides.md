@@ -36,6 +36,12 @@ let query = gql`{
 
 ---
 
+<h3 class="monospace">II</h3>
+
+How Do Tagged Template Strings Work?
+
+---
+
 Args Tag
 
 ```javascript
@@ -84,7 +90,7 @@ noop`Hello ${'World'}!`
 
 ---
 
-<h3 class="monospace">II</h3>
+<h3 class="monospace">III</h3>
 
 What Else Can We Do <br>with Tagged Template Strings?
 
@@ -250,10 +256,9 @@ p`1 + 2 = ${add(1, 2)}`.then(console.log);
 
 ---
 
-<h3 class="monospace">III</h3>
+<h3 class="monospace">IV</h3>
 
 Thank You for Your Time
 
-<div class="fragment">
-You can find more examples, the slides and the transcript for this talk at [github.com/hachibu/exploring-javascript-template-tags](https://github.com/hachibu/exploring-javascript-template-tags)
-</div>
+You can find more examples, the slides and the transcript for this talk at
+[github.com/hachibu/exploring-javascript-template-tags](https://github.com/hachibu/exploring-javascript-template-tags)

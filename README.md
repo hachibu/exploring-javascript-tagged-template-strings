@@ -18,6 +18,7 @@
    - [gql](/src/examples/3-embedding-languages/gql.js)
    - [html2dom](/src/examples/3-embedding-languages/html2dom.js)
    - [md2dom](/src/examples/3-embedding-languages/md2dom.js)
+   - [sass](/src/examples/3-embedding-languages/sass.js)
    - [sh](/src/examples/3-embedding-languages/sh.js)
    - [cljs](/src/examples/3-embedding-languages/cljs.js)
 

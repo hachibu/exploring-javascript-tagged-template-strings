@@ -89,6 +89,18 @@ describe('../src/examples/3-embedding-languages/', function() {
     );
   });
 
+  it('sass', function() {
+    let result = this.tag`
+      ul {
+        li {
+          background: red;
+        }
+      }
+    `;
+
+    result.should.equal('ul li{background:red}\n');
+  });
+
   it('sh', function() {
     this.tag`echo "Hello ${'Shell'}!"`.stdout.should.equal('Hello Shell!\n');
   });

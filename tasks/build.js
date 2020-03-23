@@ -34,7 +34,7 @@ gulp.task('build:html', () => {
   });
 
   return gulp.
-    src('src/markdown/{index,script}.md').
+    src('src/markdown/{index,transcript}.md').
     pipe(md2html).
     pipe(gulp.dest('docs'));
 });

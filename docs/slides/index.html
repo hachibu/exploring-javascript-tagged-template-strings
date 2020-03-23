@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Raymond Sohn">
   <title>Exploring JavaScript Template Tags</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -101,11 +100,14 @@
 
 <section id="title-slide">
   <h1 class="title">Exploring JavaScript Template Tags</h1>
-  <p class="author">Raymond Sohn</p>
+  <p class="subtitle"><a href="https://github.com/hachibu/exploring-javascript-template-tags">github.com/hachibu/exploring-javascript-template-tags</a></p>
 </section>
 
 <section class="slide level6">
 
+<h3 class="monospace">
+I
+</h3>
 <p>What Are Tagged Template Strings?</p>
 </section>
 <section class="slide level6">
@@ -168,31 +170,151 @@
 </section>
 <section class="slide level6">
 
-<p>What Else Can We Do<br>With Tagged Template Strings?</p>
-<div class="fragment fragment--align-left">
-<p>Embedding Domain Specific Languages</p>
+<h3 class="monospace">
+II
+</h3>
+<p>What Else Can We Do <br>with Tagged Template Strings?</p>
+</section>
+<section class="slide level6">
+
+<div class="fragment--align-left">
+<p><strong>Embedding Domain Specific Languages</strong></p>
 <ul>
-<li>Converting HTML to DOM.</li>
-<li>Converting Markdown to DOM.</li>
-<li>Executing Shell Commands with Backticks.</li>
+<li>Build single file web components with embedded HTML and CSS.</li>
+<li>Port the backticks syntax from Bash to execute shell commands.</li>
 </ul>
 </div>
 <div class="fragment fragment--align-left">
-<p>Metaprogramming</p>
+<p><strong>Metaprogramming</strong></p>
 <ul>
-<li>Inspecting Abstract Syntax Trees.</li>
+<li>Inspect Abstract Syntax Trees to improve our understanding of the JavaScript language.</li>
 </ul>
 </div>
 <div class="fragment fragment--align-left">
-<p>Asynchronous Programming</p>
+<p><strong>Async Programming</strong></p>
 <ul>
-<li>Promise Strings.</li>
+<li>Promise-aware template strings.</li>
 </ul>
 </div>
 </section>
 <section class="slide level6">
 
-<p>HTML to DOM Tag</p>
+<p>Single File Web Components with LitElement</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">class</span> HelloComponent <span class="kw">extends</span> LitElement {</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  constructor() {</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">name</span> <span class="op">=</span> <span class="st">&#39;World&#39;</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  }</span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="kw">static</span> get styles() {</span>
+<span id="cb7-7"><a href="#cb7-7"></a>    <span class="cf">return</span> css<span class="vs">`p { font-weight: bold }`</span><span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  }</span>
+<span id="cb7-9"><a href="#cb7-9"></a></span>
+<span id="cb7-10"><a href="#cb7-10"></a>  render() {</span>
+<span id="cb7-11"><a href="#cb7-11"></a>    <span class="cf">return</span> html<span class="vs">`&lt;p&gt;Hello, </span><span class="sc">${</span><span class="kw">this</span><span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">!&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a>  }</span>
+<span id="cb7-13"><a href="#cb7-13"></a>}</span>
+<span id="cb7-14"><a href="#cb7-14"></a>customElements<span class="op">.</span><span class="fu">define</span>(<span class="st">&#39;hello-components&#39;</span><span class="op">,</span> HelloComponent)<span class="op">;</span></span></code></pre></div>
+<div class="fragment">
+<div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;hello-component&gt;&lt;/hello-component&gt;</span></span></code></pre></div>
+</div>
+</section>
+<section class="slide level6">
+
+<p>Shell Tag</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">var</span> shell <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;shelljs&#39;</span>)<span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw">function</span> <span class="fu">sh</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="op">...</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="cf">return</span> shell<span class="op">.</span><span class="fu">exec</span>(result<span class="op">,</span> { <span class="dt">silent</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>}</span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a>sh<span class="vs">`echo &#39;Hello Shell!&#39;`</span></span></code></pre></div>
+<div class="fragment">
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1"></a>{</span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="dt">stdout</span><span class="op">:</span> <span class="st">&#39;Hello Shell!</span><span class="sc">\n</span><span class="st">&#39;</span><span class="op">,</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="dt">stderr</span><span class="op">:</span> <span class="st">&#39;&#39;</span><span class="op">,</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="dt">code</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="op">...</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>}</span></code></pre></div>
+</div>
+</section>
+<section class="slide level6">
+
+<p>Abstract Syntax Tree Tag</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">var</span> template <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;@babel/template&#39;</span>)<span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="kw">function</span> <span class="fu">ast</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="op">...</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="cf">return</span> template<span class="op">.</span><span class="at">smart</span><span class="op">.</span><span class="fu">ast</span>(result)<span class="op">;</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>}</span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a>ast<span class="vs">`1 + 2 * 3`</span></span></code></pre></div>
+</section>
+<section class="slide level6">
+
+<div class="sourceCode" id="cb12"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1"></a>{</span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;ExpressionStatement&#39;</span><span class="op">,</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="dt">expression</span><span class="op">:</span> {</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;BinaryExpression&#39;</span><span class="op">,</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>    <span class="dt">operator</span><span class="op">:</span> <span class="st">&#39;+&#39;</span><span class="op">,</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>    <span class="dt">left</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;NumericLiteral&#39;</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1</span> }<span class="op">,</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="dt">right</span><span class="op">:</span> {</span>
+<span id="cb12-8"><a href="#cb12-8"></a>      <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;BinaryExpression&#39;</span><span class="op">,</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>      <span class="dt">operator</span><span class="op">:</span> <span class="st">&#39;*&#39;</span><span class="op">,</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a>      <span class="dt">left</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;NumericLiteral&#39;</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">2</span> }<span class="op">,</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>      <span class="dt">right</span><span class="op">:</span> { <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;NumericLiteral&#39;</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">3</span> }</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    }</span>
+<span id="cb12-13"><a href="#cb12-13"></a>  }</span>
+<span id="cb12-14"><a href="#cb12-14"></a>}</span></code></pre></div>
+<div class="fragment">
+<div class="sourceCode" id="cb13"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1"></a><span class="dv">1</span> <span class="op">+</span> (<span class="dv">2</span> <span class="op">*</span> <span class="dv">3</span>)</span></code></pre></div>
+</div>
+</section>
+<section class="slide level6">
+
+<p>Promise-aware Tag</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">function</span> <span class="fu">p</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">promises</span>) {</span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="co">// Return a wrapper promise for the caller to wait on.</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb14-4"><a href="#cb14-4"></a>    <span class="co">// Inside of the wrapper promise,</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>    <span class="co">// wait for all of the promises to resolve.</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>    <span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>(promises)<span class="op">.</span><span class="fu">then</span>(values <span class="kw">=&gt;</span> {</span>
+<span id="cb14-7"><a href="#cb14-7"></a>      <span class="kw">let</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>      strings<span class="op">.</span><span class="fu">forEach</span>((string<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
+<span id="cb14-9"><a href="#cb14-9"></a>        <span class="co">// Once all of the promises have been resolved,</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a>        <span class="co">// concatenate the template string.</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a>        <span class="op">...</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a>      })<span class="op">;</span></span>
+<span id="cb14-13"><a href="#cb14-13"></a>      <span class="co">// Finally, resolve the wrapper promise</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a>      <span class="co">// with the result.</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a>      resolve(result)<span class="op">;</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a>    }<span class="op">,</span> reject)<span class="op">;</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a>  })<span class="op">;</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a>}</span></code></pre></div>
+</section>
+<section class="slide level6">
+
+<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">function</span> <span class="fu">add</span>(x<span class="op">,</span> y) {</span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>(resolve <span class="kw">=&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>    <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> resolve(x <span class="op">+</span> y)<span class="op">,</span> <span class="dv">5000</span>)</span>
+<span id="cb15-4"><a href="#cb15-4"></a>  )<span class="op">;</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>}</span>
+<span id="cb15-6"><a href="#cb15-6"></a></span>
+<span id="cb15-7"><a href="#cb15-7"></a>p<span class="vs">`1 + 2 = </span><span class="sc">${</span>add(<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">;</span></span></code></pre></div>
+<div class="fragment">
+<p>5 Seconds Later…</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1"></a><span class="st">&quot;1 + 2 = 3&quot;</span></span></code></pre></div>
+</div>
+</section>
+<section class="slide level6">
+
+<h3 class="monospace">
+III
+</h3>
+<p>Thank You for Your Time</p>
+<div class="fragment">
+<p>You can find more examples, the slides and the transcript for this talk at <a href="https://github.com/hachibu/exploring-javascript-template-tags">github.com/hachibu/exploring-javascript-template-tags</a></p>
+</div>
 </section>
     </div>
   </div>

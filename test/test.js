@@ -11,12 +11,12 @@ describe('../src/examples/1-basics/', function() {
     this.tag = require(suite.title + this.currentTest.title);
   });
 
-  it('noop-1', function() {
+  it('args', function() {
     this.tag`Hello ${'World'}!`.
       should.deep.equal({ strings: ['Hello ', '!'], values: ['World'] });
   });
 
-  it('noop-2', function() {
+  it('noop', function() {
     this.tag`Hello ${'World'}!`.
       should.equal('Hello World!');
   });

@@ -157,11 +157,8 @@ describe('../src/examples/5-async-programming/', function() {
   });
 
   it('promise', function() {
-    var add = (x, y) => new Promise(
-      resolve => setTimeout(() => resolve(x + y), 500)
-    );
+    var add = new Promise(resolve => setTimeout(() => resolve(1 + 2), 500));
 
-    this.tag`1 + 2 = ${add(1, 2)}`.
-      should.eventually.equal('1 + 2 = 3');
+    this.tag`1 + 2 = ${add}`.should.eventually.equal('1 + 2 = 3');
   });
 });

@@ -239,17 +239,16 @@ function p(strings, ...promises) {
 ---
 
 ```javascript
-function add(x, y) {
-  return new Promise(resolve =>
-    setTimeout(() => resolve(x + y), 5000)
-  );
-}
+// A promise that adds 1 + 2 after 5 seconds
+var add = new Promise(resolve =>
+  setTimeout(() => resolve(1 + 2), 5000)
+);
 
-p`1 + 2 = ${add(1, 2)}`.then(console.log);
+p`1 + 2 = ${add}`.then(console.log);
 ```
 
 <div class="fragment">
-5 Seconds Later...
+After 5 seconds...
 
 ```javascript
 "1 + 2 = 3"

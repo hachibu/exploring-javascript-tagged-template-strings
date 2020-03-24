@@ -216,7 +216,7 @@ Multiplication precedes addition.
 Promise-aware Tag
 
 ```javascript
-// A promise that adds 1 + 2 after 5 seconds
+// A promise that waits 5 seconds and then adds 1 + 2
 var add = new Promise(resolve =>
   setTimeout(() => resolve(1 + 2), 5000)
 );
@@ -225,7 +225,7 @@ p`1 + 2 = ${add}`.then(console.log);
 ```
 
 <div class="fragment">
-After 5 seconds...
+5 seconds after being called.
 
 ```javascript
 "1 + 2 = 3"

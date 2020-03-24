@@ -281,14 +281,14 @@ III
 <section class="slide level6">
 
 <p>Promise-aware Tag</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">// A promise that adds 1 + 2 after 5 seconds</span></span>
+<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">// A promise that waits 5 seconds and then adds 1 + 2</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="kw">var</span> add <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>(resolve <span class="kw">=&gt;</span></span>
 <span id="cb14-3"><a href="#cb14-3"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> resolve(<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span>)<span class="op">,</span> <span class="dv">5000</span>)</span>
 <span id="cb14-4"><a href="#cb14-4"></a>)<span class="op">;</span></span>
 <span id="cb14-5"><a href="#cb14-5"></a></span>
 <span id="cb14-6"><a href="#cb14-6"></a>p<span class="vs">`1 + 2 = </span><span class="sc">${</span>add<span class="sc">}</span><span class="vs">`</span><span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">;</span></span></code></pre></div>
 <div class="fragment">
-<p>After 5 seconds…</p>
+<p>5 seconds after being called.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1"></a><span class="st">&quot;1 + 2 = 3&quot;</span></span></code></pre></div>
 </div>
 </section>

@@ -134,7 +134,7 @@ class HelloComponent extends LitElement {
     return html`<p>Hello, ${this.name}!</p>`;
   }
 }
-customElements.define('hello-components', HelloComponent);
+customElements.define('hello-component', HelloComponent);
 ```
 
 <div class="fragment">

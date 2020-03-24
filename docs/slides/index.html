@@ -113,7 +113,7 @@ I
 <section class="slide level6">
 
 <p>GraphQL Tag</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">let</span> query <span class="op">=</span> gql<span class="vs">`{</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">var</span> query <span class="op">=</span> gql<span class="vs">`{</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="vs">  users {</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="vs">    name</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="vs">  }</span></span>
@@ -125,8 +125,8 @@ I
 <span id="cb2-4"><a href="#cb2-4"></a>    {</span>
 <span id="cb2-5"><a href="#cb2-5"></a>      <span class="dt">kind</span><span class="op">:</span> <span class="st">&#39;OperationDefinition&#39;</span><span class="op">,</span></span>
 <span id="cb2-6"><a href="#cb2-6"></a>      <span class="dt">operation</span><span class="op">:</span> <span class="st">&#39;query&#39;</span><span class="op">,</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>      <span class="dt">selectionSet</span><span class="op">:</span> [<span class="op">...</span>]<span class="op">,</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>      <span class="op">...</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>      <span class="dt">selectionSet</span><span class="op">:</span> […]<span class="op">,</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>      …</span>
 <span id="cb2-9"><a href="#cb2-9"></a>    }</span>
 <span id="cb2-10"><a href="#cb2-10"></a>  ]</span>
 <span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
@@ -158,7 +158,7 @@ II
 
 <p>NOOP Tag</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">function</span> <span class="fu">noop</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="kw">let</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="kw">var</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>  <span class="co">// Append each string to the result.</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a>  strings<span class="op">.</span><span class="fu">forEach</span>((string<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
 <span id="cb5-5"><a href="#cb5-5"></a>    result <span class="op">+=</span> string<span class="op">;</span></span>
@@ -207,20 +207,19 @@ III
 <section class="slide level6">
 
 <p>Single File Web Components with LitElement</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">class</span> HelloComponent <span class="kw">extends</span> LitElement {</span>
-<span id="cb7-2"><a href="#cb7-2"></a>  constructor() {</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">name</span> <span class="op">=</span> <span class="st">&#39;World&#39;</span><span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>  }</span>
-<span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="kw">static</span> get styles() {</span>
-<span id="cb7-7"><a href="#cb7-7"></a>    <span class="cf">return</span> css<span class="vs">`p { font-weight: bold }`</span><span class="op">;</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a>  }</span>
-<span id="cb7-9"><a href="#cb7-9"></a></span>
-<span id="cb7-10"><a href="#cb7-10"></a>  render() {</span>
-<span id="cb7-11"><a href="#cb7-11"></a>    <span class="cf">return</span> html<span class="vs">`&lt;p&gt;Hello, </span><span class="sc">${</span><span class="kw">this</span><span class="op">.</span><span class="at">name</span><span class="sc">}</span><span class="vs">!&lt;/p&gt;`</span><span class="op">;</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a>  }</span>
-<span id="cb7-13"><a href="#cb7-13"></a>}</span>
-<span id="cb7-14"><a href="#cb7-14"></a>customElements<span class="op">.</span><span class="fu">define</span>(<span class="st">&#39;hello-component&#39;</span><span class="op">,</span> HelloComponent)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> { LitElement<span class="op">,</span> css<span class="op">,</span> html } <span class="im">from</span> <span class="st">&#39;lit-element&#39;</span><span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">class</span> HelloComponent <span class="kw">extends</span> LitElement {</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="kw">static</span> get styles() {</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    <span class="cf">return</span> css<span class="vs">`p { font-weight: bold }`</span><span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>  }</span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  render() {</span>
+<span id="cb7-9"><a href="#cb7-9"></a>    <span class="cf">return</span> html<span class="vs">`&lt;p&gt;Hello, Component!&lt;/p&gt;`</span><span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>  }</span>
+<span id="cb7-11"><a href="#cb7-11"></a>}</span>
+<span id="cb7-12"><a href="#cb7-12"></a></span>
+<span id="cb7-13"><a href="#cb7-13"></a>customElements<span class="op">.</span><span class="fu">define</span>(<span class="st">&#39;hello-component&#39;</span><span class="op">,</span> HelloComponent)<span class="op">;</span></span></code></pre></div>
 <div class="fragment">
 <div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;hello-component&gt;&lt;/hello-component&gt;</span></span></code></pre></div>
 </div>
@@ -231,7 +230,7 @@ III
 <div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">var</span> shell <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;shelljs&#39;</span>)<span class="op">;</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a></span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="kw">function</span> <span class="fu">sh</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="op">...</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  …</span>
 <span id="cb9-5"><a href="#cb9-5"></a>  <span class="cf">return</span> shell<span class="op">.</span><span class="fu">exec</span>(result<span class="op">,</span> { <span class="dt">silent</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
 <span id="cb9-6"><a href="#cb9-6"></a>}</span>
 <span id="cb9-7"><a href="#cb9-7"></a></span>
@@ -241,7 +240,7 @@ III
 <span id="cb10-2"><a href="#cb10-2"></a>  <span class="dt">stdout</span><span class="op">:</span> <span class="st">&#39;Hello Shell!</span><span class="sc">\n</span><span class="st">&#39;</span><span class="op">,</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>  <span class="dt">stderr</span><span class="op">:</span> <span class="st">&#39;&#39;</span><span class="op">,</span></span>
 <span id="cb10-4"><a href="#cb10-4"></a>  <span class="dt">code</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
-<span id="cb10-5"><a href="#cb10-5"></a>  <span class="op">...</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  …</span>
 <span id="cb10-6"><a href="#cb10-6"></a>}</span></code></pre></div>
 </div>
 </section>
@@ -251,7 +250,7 @@ III
 <div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">var</span> template <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;@babel/template&#39;</span>)<span class="op">;</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="kw">function</span> <span class="fu">ast</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
-<span id="cb11-4"><a href="#cb11-4"></a>  <span class="op">...</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>  …</span>
 <span id="cb11-5"><a href="#cb11-5"></a>  <span class="cf">return</span> template<span class="op">.</span><span class="at">smart</span><span class="op">.</span><span class="fu">ast</span>(result)<span class="op">;</span></span>
 <span id="cb11-6"><a href="#cb11-6"></a>}</span>
 <span id="cb11-7"><a href="#cb11-7"></a></span>
@@ -300,11 +299,11 @@ III
 <span id="cb16-4"><a href="#cb16-4"></a>    <span class="co">// Inside of the wrapper promise,</span></span>
 <span id="cb16-5"><a href="#cb16-5"></a>    <span class="co">// wait for all of the promises to resolve.</span></span>
 <span id="cb16-6"><a href="#cb16-6"></a>    <span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>(promises)<span class="op">.</span><span class="fu">then</span>(values <span class="kw">=&gt;</span> {</span>
-<span id="cb16-7"><a href="#cb16-7"></a>      <span class="kw">let</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>      <span class="kw">var</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
 <span id="cb16-8"><a href="#cb16-8"></a>      strings<span class="op">.</span><span class="fu">forEach</span>((string<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
 <span id="cb16-9"><a href="#cb16-9"></a>        <span class="co">// Once all of the promises have been resolved,</span></span>
 <span id="cb16-10"><a href="#cb16-10"></a>        <span class="co">// concatenate the template string.</span></span>
-<span id="cb16-11"><a href="#cb16-11"></a>        <span class="op">...</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a>        …</span>
 <span id="cb16-12"><a href="#cb16-12"></a>      })<span class="op">;</span></span>
 <span id="cb16-13"><a href="#cb16-13"></a>      <span class="co">// Finally, resolve the wrapper promise</span></span>
 <span id="cb16-14"><a href="#cb16-14"></a>      <span class="co">// with the result.</span></span>

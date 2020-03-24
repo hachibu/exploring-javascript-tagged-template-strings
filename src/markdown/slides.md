@@ -12,12 +12,13 @@ What Are Tagged Template Strings?
 GraphQL Tag
 
 ```javascript
-let query = gql`{
+var query = gql`{
   users {
     name
   }
 }`
 ```
+
 <div class="fragment">
 ```javascript
 {
@@ -26,8 +27,8 @@ let query = gql`{
     {
       kind: 'OperationDefinition',
       operation: 'query',
-      selectionSet: [...],
-      ...
+      selectionSet: […],
+      …
     }
   ]
 }
@@ -67,7 +68,7 @@ NOOP Tag
 
 ```javascript
 function noop(strings, ...values) {
-  let result = '';
+  var result = '';
   // Append each string to the result.
   strings.forEach((string, index) => {
     result += string;
@@ -121,19 +122,18 @@ __Async Programming__
 Single File Web Components with LitElement
 
 ```javascript
-class HelloComponent extends LitElement {
-  constructor() {
-    this.name = 'World';
-  }
+import { LitElement, css, html } from 'lit-element';
 
+class HelloComponent extends LitElement {
   static get styles() {
     return css`p { font-weight: bold }`;
   }
 
   render() {
-    return html`<p>Hello, ${this.name}!</p>`;
+    return html`<p>Hello, Component!</p>`;
   }
 }
+
 customElements.define('hello-component', HelloComponent);
 ```
 
@@ -151,7 +151,7 @@ Shell Tag
 var shell = require('shelljs');
 
 function sh(strings, ...values) {
-  ...
+  …
   return shell.exec(result, { silent: true });
 }
 
@@ -164,7 +164,7 @@ sh`echo 'Hello Shell!'`
   stdout: 'Hello Shell!\n',
   stderr: '',
   code: 0,
-  ...
+  …
 }
 ```
 </div>
@@ -177,7 +177,7 @@ Abstract Syntax Tree Tag
 var template = require('@babel/template');
 
 function ast(strings, ...values) {
-  ...
+  …
   return template.smart.ast(result);
 }
 
@@ -241,11 +241,11 @@ function p(strings, ...promises) {
     // Inside of the wrapper promise,
     // wait for all of the promises to resolve.
     Promise.all(promises).then(values => {
-      let result = '';
+      var result = '';
       strings.forEach((string, index) => {
         // Once all of the promises have been resolved,
         // concatenate the template string.
-        ...
+        …
       });
       // Finally, resolve the wrapper promise
       // with the result.

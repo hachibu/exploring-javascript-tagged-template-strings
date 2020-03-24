@@ -204,6 +204,8 @@ ast`1 + 2 * 3`
 ```
 
 <div class="fragment">
+Multiplication precedes addition.
+
 ```javascript
 1 + (2 * 3)
 ```

@@ -8,7 +8,7 @@ author: >
   </p>
 ---
 
-# { data-background-color="black" }
+# { data-background-color="#24292e" }
 
 <div class="chapter">
   <h3>I</h3>
@@ -43,7 +43,7 @@ var query = gql`{
 ```
 </div>
 
-# { data-background-color="black" }
+# { data-background-color="#24292e" }
 
 <div class="chapter">
   <h3>II</h3>
@@ -98,7 +98,7 @@ noop`Hello ${'World'}!`
 ```
 </div>
 
-# { data-background-color="black" }
+# { data-background-color="#24292e" }
 
 <div class="chapter">
   <h3>III</h3>

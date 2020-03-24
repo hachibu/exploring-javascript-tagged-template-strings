@@ -1,6 +1,11 @@
 ---
 title: Exploring JavaScript Template Tags
-subtitle: "[github.com/hachibu/exploring-javascript-template-tags](https://github.com/hachibu/exploring-javascript-template-tags)"
+author: >
+  Raymond Sohn
+  <p class="subtitle">
+    [\@20percentempty](https://twitter.com/20percentempty) -
+    [hachibu.net](https://hachibu.net)
+  </p>
 ---
 
 <h3 class="monospace">I</h3>
@@ -259,7 +264,8 @@ function p(strings, ...promises) {
 
 <h3 class="monospace">IV</h3>
 
-Thank You for Your Time
+Thank you for your time.
 
-You can find more examples, the slides and the transcript for this talk at
-[github.com/hachibu/exploring-javascript-template-tags](https://github.com/hachibu/exploring-javascript-template-tags)
+You can find more examples, these slides and the transcript for this talk on GitHub.
+
+[https://github.com/hachibu/exploring-javascript-template-tags](https://github.com/hachibu/exploring-javascript-template-tags)

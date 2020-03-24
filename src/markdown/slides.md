@@ -8,9 +8,12 @@ author: >
   </p>
 ---
 
-<h3 class="monospace">I</h3>
+# { data-background-color="black" }
 
-What Are Tagged Template Strings?
+<div class="chapter">
+  <h3>I</h3>
+  What Are Tagged Template Strings?
+</div>
 
 ---
 
@@ -40,11 +43,12 @@ var query = gql`{
 ```
 </div>
 
----
+# { data-background-color="black" }
 
-<h3 class="monospace">II</h3>
-
-How Do Tagged Template Strings Work?
+<div class="chapter">
+  <h3>II</h3>
+  How Do Tagged Template Strings Work?
+</div>
 
 ---
 
@@ -94,11 +98,12 @@ noop`Hello ${'World'}!`
 ```
 </div>
 
----
+# { data-background-color="black" }
 
-<h3 class="monospace">III</h3>
-
-What Else Can We Do <br>with Tagged Template Strings?
+<div class="chapter">
+  <h3>III</h3>
+  What Else Can We Do <br>with Tagged Template Strings?
+</div>
 
 ---
 
@@ -261,8 +266,6 @@ function p(strings, ...promises) {
 ```
 
 ---
-
-<h3 class="monospace">IV</h3>
 
 Thank you for your time.
 

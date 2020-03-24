@@ -1,17 +1,31 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, ul {
+  color: #24292e !important;
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !important;
   text-transform: none !important;
 }
 
 .title {
-  margin-bottom: 3rem !important;
+  font-size: 2em !important;
+  margin-bottom: 5rem !important;
+}
+
+.author {
+  margin: 0 !important;
 }
 
 .subtitle {
   font-size: 2rem !important;
+  margin: 0 !important;
 }
 
 div.sourceCode {
   margin: 0;
+}
+
+pre.sourceCode {
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 pre code {
@@ -30,5 +44,6 @@ pre code {
 }
 
 .chapter h3 {
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
 }

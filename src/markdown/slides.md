@@ -1,5 +1,5 @@
 ---
-title: Exploring JavaScript Template Tags
+title: "Exploring<br>JavaScript<br>Template Tags"
 author: >
   Raymond Sohn
   <p class="subtitle">

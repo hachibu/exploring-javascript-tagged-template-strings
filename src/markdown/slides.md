@@ -217,7 +217,9 @@ ast`1 + 2 * 3`
 ```
 
 <div class="fragment">
-Multiplication precedes addition.
+<small>
+  Multiplication precedes addition.
+</small>
 
 ```javascript
 1 + (2 * 3)
@@ -239,7 +241,9 @@ p`Hello ${promise}!`.then(console.log);
 ```
 
 <div class="fragment">
-*5 seconds after being called…*
+<small>
+  *5 seconds after being called…*
+</small>
 
 ```javascript
 'Hello Promise!'

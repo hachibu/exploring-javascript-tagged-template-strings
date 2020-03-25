@@ -143,7 +143,7 @@ class HelloComponent extends LitElement {
   }
 
   render() {
-    return html`<p>Hello, Component!</p>`;
+    return html`<p>Hello Component!</p>`;
   }
 }
 

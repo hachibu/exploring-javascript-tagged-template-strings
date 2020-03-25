@@ -8,6 +8,11 @@ ul {
   margin: 0 0 0 2em !important;
 }
 
+.backgrounds {
+  background-size: cover;
+  opacity: 0.25;
+}
+
 .title {
   font-size: 2em !important;
   margin-bottom: 5rem !important;
@@ -43,10 +48,6 @@ pre code {
   margin: 2rem 0;
   padding: 0 3rem;
   text-align: left;
-}
-
-.chapter * {
-  color: white !important;
 }
 
 .chapter h3 {

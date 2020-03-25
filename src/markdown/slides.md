@@ -6,17 +6,20 @@ author: >
     [\@20percentempty](https://twitter.com/20percentempty) -
     [hachibu.net](https://hachibu.net)
   </p>
-background-image: "images/background.jpeg"
+title-slide-attributes:
+    data-background-image: images/background.jpeg
+    data-background-size: cover
+    data-background-opacity: 0.5
 ---
 
-#
+# { data-background-color="#24292e" }
 
 <div class="chapter">
   <h3>I</h3>
   What Are Tagged Template Strings?
 </div>
 
-# { data-background-color="white" }
+#
 
 GraphQL Tag
 
@@ -44,14 +47,14 @@ var query = gql`{
 ```
 </div>
 
-#
+# { data-background-color="#24292e" }
 
 <div class="chapter">
   <h3>II</h3>
   How Do Tagged Template Strings Work?
 </div>
 
-# { data-background-color="white" }
+#
 
 Args Tag
 
@@ -72,7 +75,7 @@ args`Hello ${'World'}!`
 ```
 </div>
 
-# { data-background-color="white" }
+#
 
 NOOP Tag
 
@@ -99,14 +102,14 @@ noop`Hello ${'World'}!`
 ```
 </div>
 
-#
+# { data-background-color="#24292e" }
 
 <div class="chapter">
   <h3>III</h3>
   What Else Can We Do <br>with Tagged Template Strings?
 </div>
 
-# { data-background-color="white" }
+#
 
 <div class="fragment--align-left">
 __Embedding Domain Specific Languages__
@@ -128,7 +131,7 @@ __Async Programming__
 - Promise-aware template strings.
 </div>
 
-# { data-background-color="white" }
+#
 
 Single File Web Components with LitElement
 
@@ -154,7 +157,7 @@ customElements.define('hello-component', HelloComponent);
 ```
 </div>
 
-# { data-background-color="white" }
+#
 
 Shell Tag
 
@@ -180,7 +183,7 @@ sh`echo 'Hello Shell!'`
 ```
 </div>
 
-# { data-background-color="white" }
+#
 
 Abstract Syntax Tree Tag
 
@@ -195,7 +198,7 @@ function ast(strings, ...values) {
 ast`1 + 2 * 3`
 ```
 
-# { data-background-color="white" }
+#
 
 ```javascript
 {
@@ -222,7 +225,7 @@ Multiplication precedes addition.
 ```
 </div>
 
-# { data-background-color="white" }
+#
 
 Promise Tag
 
@@ -244,7 +247,7 @@ p`Hello ${promise}!`.then(console.log);
 ```
 </div>
 
-# { data-background-color="white" }
+#
 
 ```javascript
 function p(strings, ...promises) {
@@ -263,8 +266,12 @@ function p(strings, ...promises) {
 }
 ```
 
-#
+# { data-background-color="#24292e" }
 
+<div class="chapter">
 Thank you for your time.
 
-You can find more examples, these slides and the transcript for this talk on [GitHub](https://github.com/hachibu/exploring-javascript-template-tags).
+You can find more examples, these slides and the transcript for this talk here:
+
+[github.com/hachibu/exploring-javascript-template-tags](https://github.com/hachibu/exploring-javascript-template-tags)
+</div>

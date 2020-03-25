@@ -98,7 +98,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide">
+<section id="title-slide" data-background-image="images/background.jpeg" data-background-opacity="0.5" data-background-size="cover">
   <h1 class="title">Exploring<br>JavaScript<br>Template Tags</h1>
   <p class="author">Raymond Sohn
 <p class="subtitle">
@@ -106,8 +106,8 @@
 </p></p>
 </section>
 
-<section id="section" class="slide level1">
-<h1></h1>
+<section id="section" class="slide level1" data-background-color="#24292e">
+<h1 data-background-color="#24292e"></h1>
 <div class="chapter">
 <h3>
 I
@@ -115,8 +115,8 @@ I
 <p>What Are Tagged Template Strings?</p>
 </div>
 </section>
-<section id="section-1" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-1" class="slide level1">
+<h1></h1>
 <p>GraphQL Tag</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">var</span> query <span class="op">=</span> gql<span class="vs">`{</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="vs">  users {</span></span>
@@ -137,8 +137,8 @@ I
 <span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
 </div>
 </section>
-<section id="section-2" class="slide level1">
-<h1></h1>
+<section id="section-2" class="slide level1" data-background-color="#24292e">
+<h1 data-background-color="#24292e"></h1>
 <div class="chapter">
 <h3>
 II
@@ -146,8 +146,8 @@ II
 <p>How Do Tagged Template Strings Work?</p>
 </div>
 </section>
-<section id="section-3" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-3" class="slide level1">
+<h1></h1>
 <p>Args Tag</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">function</span> <span class="fu">args</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
 <span id="cb3-2"><a href="#cb3-2"></a>  <span class="cf">return</span> { strings<span class="op">,</span> values }<span class="op">;</span></span>
@@ -161,8 +161,8 @@ II
 <span id="cb4-4"><a href="#cb4-4"></a>}</span></code></pre></div>
 </div>
 </section>
-<section id="section-4" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-4" class="slide level1">
+<h1></h1>
 <p>NOOP Tag</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">function</span> <span class="fu">noop</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">values</span>) {</span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="kw">var</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
@@ -182,8 +182,8 @@ II
 <div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1"></a><span class="st">&#39;Hello World!&#39;</span></span></code></pre></div>
 </div>
 </section>
-<section id="section-5" class="slide level1">
-<h1></h1>
+<section id="section-5" class="slide level1" data-background-color="#24292e">
+<h1 data-background-color="#24292e"></h1>
 <div class="chapter">
 <h3>
 III
@@ -191,8 +191,8 @@ III
 <p>What Else Can We Do <br>with Tagged Template Strings?</p>
 </div>
 </section>
-<section id="section-6" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-6" class="slide level1">
+<h1></h1>
 <div class="fragment--align-left">
 <p><strong>Embedding Domain Specific Languages</strong></p>
 <ul>
@@ -213,8 +213,8 @@ III
 </ul>
 </div>
 </section>
-<section id="section-7" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-7" class="slide level1">
+<h1></h1>
 <p>Single File Web Components with LitElement</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> { LitElement<span class="op">,</span> css<span class="op">,</span> html } <span class="im">from</span> <span class="st">&#39;lit-element&#39;</span><span class="op">;</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a></span>
@@ -233,8 +233,8 @@ III
 <div class="sourceCode" id="cb8"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;hello-component&gt;&lt;/hello-component&gt;</span></span></code></pre></div>
 </div>
 </section>
-<section id="section-8" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-8" class="slide level1">
+<h1></h1>
 <p>Shell Tag</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">var</span> shell <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;shelljs&#39;</span>)<span class="op">;</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a></span>
@@ -253,8 +253,8 @@ III
 <span id="cb10-6"><a href="#cb10-6"></a>}</span></code></pre></div>
 </div>
 </section>
-<section id="section-9" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-9" class="slide level1">
+<h1></h1>
 <p>Abstract Syntax Tree Tag</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">var</span> template <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;@babel/template&#39;</span>)<span class="op">;</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
@@ -265,8 +265,8 @@ III
 <span id="cb11-7"><a href="#cb11-7"></a></span>
 <span id="cb11-8"><a href="#cb11-8"></a>ast<span class="vs">`1 + 2 * 3`</span></span></code></pre></div>
 </section>
-<section id="section-10" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-10" class="slide level1">
+<h1></h1>
 <div class="sourceCode" id="cb12"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1"></a>{</span>
 <span id="cb12-2"><a href="#cb12-2"></a>  <span class="dt">type</span><span class="op">:</span> <span class="st">&#39;ExpressionStatement&#39;</span><span class="op">,</span></span>
 <span id="cb12-3"><a href="#cb12-3"></a>  <span class="dt">expression</span><span class="op">:</span> {</span>
@@ -286,8 +286,8 @@ III
 <div class="sourceCode" id="cb13"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1"></a><span class="dv">1</span> <span class="op">+</span> (<span class="dv">2</span> <span class="op">*</span> <span class="dv">3</span>)</span></code></pre></div>
 </div>
 </section>
-<section id="section-11" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-11" class="slide level1">
+<h1></h1>
 <p>Promise Tag</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">// A promise that waits 5 seconds and</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="co">// then returns the string &#39;Promise&#39;</span></span>
@@ -301,8 +301,8 @@ III
 <div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1"></a><span class="st">&#39;Hello Promise!&#39;</span></span></code></pre></div>
 </div>
 </section>
-<section id="section-12" class="slide level1" data-background-color="white">
-<h1 data-background-color="white"></h1>
+<section id="section-12" class="slide level1">
+<h1></h1>
 <div class="sourceCode" id="cb16"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">function</span> <span class="fu">p</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">promises</span>) {</span>
 <span id="cb16-2"><a href="#cb16-2"></a>  <span class="co">// Return a promise for the caller to wait on.</span></span>
 <span id="cb16-3"><a href="#cb16-3"></a>  <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
@@ -318,10 +318,13 @@ III
 <span id="cb16-13"><a href="#cb16-13"></a>  })<span class="op">;</span></span>
 <span id="cb16-14"><a href="#cb16-14"></a>}</span></code></pre></div>
 </section>
-<section id="section-13" class="slide level1">
-<h1></h1>
+<section id="section-13" class="slide level1" data-background-color="#24292e">
+<h1 data-background-color="#24292e"></h1>
+<div class="chapter">
 <p>Thank you for your time.</p>
-<p>You can find more examples, these slides and the transcript for this talk on <a href="https://github.com/hachibu/exploring-javascript-template-tags">GitHub</a>.</p>
+<p>You can find more examples, these slides and the transcript for this talk here:</p>
+<p><a href="https://github.com/hachibu/exploring-javascript-template-tags">github.com/hachibu/exploring-javascript-template-tags</a></p>
+</div>
 </section>
     </div>
   </div>
@@ -335,8 +338,6 @@ III
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
-       // Parallax background image
-       parallaxBackgroundImage: 'images/background.jpeg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
         // Optional reveal.js plugins
         dependencies: [

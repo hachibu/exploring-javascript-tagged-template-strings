@@ -288,38 +288,35 @@ III
 </section>
 <section class="slide level1">
 
-<p>Promise-aware Tag</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">// A promise that waits 5 seconds and then adds 1 + 2</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="kw">var</span> add <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>(resolve <span class="kw">=&gt;</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> resolve(<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span>)<span class="op">,</span> <span class="dv">5000</span>)</span>
-<span id="cb14-4"><a href="#cb14-4"></a>)<span class="op">;</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a></span>
-<span id="cb14-6"><a href="#cb14-6"></a>p<span class="vs">`1 + 2 = </span><span class="sc">${</span>add<span class="sc">}</span><span class="vs">`</span><span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">;</span></span></code></pre></div>
+<p>Promise Tag</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">// A promise that waits 5 seconds and</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="co">// then returns the string &#39;Promise&#39;</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="kw">var</span> promise <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>(resolve <span class="kw">=&gt;</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> resolve(<span class="st">&#39;Promise&#39;</span>)<span class="op">,</span> <span class="dv">5000</span>)</span>
+<span id="cb14-5"><a href="#cb14-5"></a>)<span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a>p<span class="vs">`Hello </span><span class="sc">${</span>promise<span class="sc">}</span><span class="vs">!`</span><span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">;</span></span></code></pre></div>
 <div class="fragment">
 <p><em>5 seconds after being called…</em></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1"></a><span class="st">&quot;1 + 2 = 3&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1"></a><span class="st">&#39;Hello Promise!&#39;</span></span></code></pre></div>
 </div>
 </section>
 <section class="slide level1">
 
 <div class="sourceCode" id="cb16"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">function</span> <span class="fu">p</span>(strings<span class="op">,</span> <span class="op">...</span><span class="at">promises</span>) {</span>
-<span id="cb16-2"><a href="#cb16-2"></a>  <span class="co">// Return a wrapper promise for the caller to wait on.</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="co">// Return a promise for the caller to wait on.</span></span>
 <span id="cb16-3"><a href="#cb16-3"></a>  <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
-<span id="cb16-4"><a href="#cb16-4"></a>    <span class="co">// Inside of the wrapper promise,</span></span>
-<span id="cb16-5"><a href="#cb16-5"></a>    <span class="co">// wait for all of the promises to resolve.</span></span>
-<span id="cb16-6"><a href="#cb16-6"></a>    <span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>(promises)<span class="op">.</span><span class="fu">then</span>(values <span class="kw">=&gt;</span> {</span>
-<span id="cb16-7"><a href="#cb16-7"></a>      <span class="kw">var</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
-<span id="cb16-8"><a href="#cb16-8"></a>      strings<span class="op">.</span><span class="fu">forEach</span>((string<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
-<span id="cb16-9"><a href="#cb16-9"></a>        <span class="co">// Once all of the promises have been resolved,</span></span>
-<span id="cb16-10"><a href="#cb16-10"></a>        <span class="co">// concatenate the template string.</span></span>
-<span id="cb16-11"><a href="#cb16-11"></a>        …</span>
-<span id="cb16-12"><a href="#cb16-12"></a>      })<span class="op">;</span></span>
-<span id="cb16-13"><a href="#cb16-13"></a>      <span class="co">// Finally, resolve the wrapper promise</span></span>
-<span id="cb16-14"><a href="#cb16-14"></a>      <span class="co">// with the result.</span></span>
-<span id="cb16-15"><a href="#cb16-15"></a>      resolve(result)<span class="op">;</span></span>
-<span id="cb16-16"><a href="#cb16-16"></a>    }<span class="op">,</span> reject)<span class="op">;</span></span>
-<span id="cb16-17"><a href="#cb16-17"></a>  })<span class="op">;</span></span>
-<span id="cb16-18"><a href="#cb16-18"></a>}</span></code></pre></div>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="co">// Wait for all of the promises to resolve.</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>    <span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>(promises)<span class="op">.</span><span class="fu">then</span>(values <span class="kw">=&gt;</span> {</span>
+<span id="cb16-6"><a href="#cb16-6"></a>      <span class="kw">var</span> result <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>      strings<span class="op">.</span><span class="fu">forEach</span>((string<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
+<span id="cb16-8"><a href="#cb16-8"></a>        … <span class="co">// Concatenate the template string.</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a>      })<span class="op">;</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a>      <span class="co">// Resolve the promise with the result.</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a>      resolve(result)<span class="op">;</span></span>
+<span id="cb16-12"><a href="#cb16-12"></a>    }<span class="op">,</span> reject)<span class="op">;</span></span>
+<span id="cb16-13"><a href="#cb16-13"></a>  })<span class="op">;</span></span>
+<span id="cb16-14"><a href="#cb16-14"></a>}</span></code></pre></div>
 </section>
 <section class="slide level1">
 

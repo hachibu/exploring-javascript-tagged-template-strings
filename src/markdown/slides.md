@@ -223,22 +223,23 @@ Multiplication precedes addition.
 
 ---
 
-Promise-aware Tag
+Promise Tag
 
 ```javascript
-// A promise that waits 5 seconds and then adds 1 + 2
-var add = new Promise(resolve =>
-  setTimeout(() => resolve(1 + 2), 5000)
+// A promise that waits 5 seconds and
+// then returns the string 'Promise'
+var promise = new Promise(resolve =>
+  setTimeout(() => resolve('Promise'), 5000)
 );
 
-p`1 + 2 = ${add}`.then(console.log);
+p`Hello ${promise}!`.then(console.log);
 ```
 
 <div class="fragment">
 *5 seconds after being called…*
 
 ```javascript
-"1 + 2 = 3"
+'Hello Promise!'
 ```
 </div>
 
@@ -246,19 +247,15 @@ p`1 + 2 = ${add}`.then(console.log);
 
 ```javascript
 function p(strings, ...promises) {
-  // Return a wrapper promise for the caller to wait on.
+  // Return a promise for the caller to wait on.
   return new Promise((resolve, reject) => {
-    // Inside of the wrapper promise,
-    // wait for all of the promises to resolve.
+    // Wait for all of the promises to resolve.
     Promise.all(promises).then(values => {
       var result = '';
       strings.forEach((string, index) => {
-        // Once all of the promises have been resolved,
-        // concatenate the template string.
-        …
+        … // Concatenate the template string.
       });
-      // Finally, resolve the wrapper promise
-      // with the result.
+      // Resolve the promise with the result.
       resolve(result);
     }, reject);
   });

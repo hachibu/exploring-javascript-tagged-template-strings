@@ -14,8 +14,8 @@ gulp.task('build:slides.md', () => {
     ext: '.html',
     args: [
       '-s',
-      '-c reveal.js/css/theme/white.css',
-      '-c reveal.js/css/custom.css'
+      '--include-in-header=src/reveal.js/header.html',
+      '--include-after-body=src/reveal.js/footer.html'
     ]
   });
 
@@ -39,22 +39,15 @@ gulp.task('build:html', () => {
     pipe(gulp.dest('docs'));
 });
 
-gulp.task('build:css', () => {
-  return gulp.
-    src('src/**/*.css').
-    pipe(gulp.dest('docs/slides'));
-});
-
 gulp.task('build:images', () => {
   return gulp.
-    src('src/**/*.jpeg').
-    pipe(gulp.dest('docs/slides'));
+    src('src/images/*.jpeg').
+    pipe(gulp.dest('docs/slides/images'));
 });
 
 gulp.task('build', gulp.parallel(
   'build:reveal.js',
-  'build:css',
-  'build:images',
   'build:slides.md',
+  'build:images',
   'build:html'
 ));

@@ -5,6 +5,7 @@ date: >-
   [hachibu.net](https://hachibu.net)
   ·
   [\@20percentempty](https://twitter.com/20percentempty)
+theme: white
 title-slide-attributes:
     data-background-image: images/background.jpeg
     data-background-size: cover

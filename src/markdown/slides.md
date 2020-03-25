@@ -1,11 +1,10 @@
 ---
-title: "Exploring<br>JavaScript<br>Template Tags"
-author: >
-  Raymond Sohn
-  <p class="subtitle">
-    [\@20percentempty](https://twitter.com/20percentempty) -
-    [hachibu.net](https://hachibu.net)
-  </p>
+title: Exploring<br>JavaScript<br>Template Tags
+author: Raymond Sohn
+date: >-
+  [hachibu.net](https://hachibu.net)
+  ·
+  [\@20percentempty](https://twitter.com/20percentempty)
 title-slide-attributes:
     data-background-image: images/background.jpeg
     data-background-size: cover

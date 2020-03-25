@@ -56,28 +56,28 @@ var query = gql`{
 
 #
 
-Args Tag
+Arguments Tag
 
 ```javascript
 function args(strings, ...values) {
   return { strings, values };
 }
 
-args`Hello ${'World'}!`
+args`Hello ${'Arguments'}!`
 ```
 
 <div class="fragment">
 ```javascript
 {
   strings: ['Hello', '!'],
-  values: ['World']
+  values: ['Arguments']
 }
 ```
 </div>
 
 #
 
-NOOP Tag
+NO-OP Tag
 
 ```javascript
 function noop(strings, ...values) {
@@ -93,12 +93,12 @@ function noop(strings, ...values) {
   return result;
 }
 
-noop`Hello ${'World'}!`
+noop`Hello ${'No Operation'}!`
 ```
 
 <div class="fragment">
 ```javascript
-'Hello World!'
+'Hello No Operation!'
 ```
 </div>
 

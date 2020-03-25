@@ -106,7 +106,7 @@ noop`Hello ${'World'}!`
 
 <div class="chapter">
   <h3>III</h3>
-  What Else Can We Do <br>with Template Tags?
+  What Else Can We Do with Template Tags?
 </div>
 
 #

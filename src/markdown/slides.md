@@ -94,7 +94,7 @@ noop`Hello ${'World'}!`
 
 <div class="fragment">
 ```javascript
-"Hello World!"
+'Hello World!'
 ```
 </div>
 

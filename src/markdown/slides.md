@@ -235,7 +235,7 @@ p`1 + 2 = ${add}`.then(console.log);
 ```
 
 <div class="fragment">
-5 seconds after being called.
+*5 seconds after being called…*
 
 ```javascript
 "1 + 2 = 3"
@@ -269,6 +269,4 @@ function p(strings, ...promises) {
 
 Thank you for your time.
 
-You can find more examples, these slides and the transcript for this talk on GitHub.
-
-[https://github.com/hachibu/exploring-javascript-template-tags](https://github.com/hachibu/exploring-javascript-template-tags)
+You can find more examples, these slides and the transcript for this talk on [GitHub](https://github.com/hachibu/exploring-javascript-template-tags).

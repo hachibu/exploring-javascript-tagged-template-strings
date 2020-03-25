@@ -63,7 +63,9 @@ function args(strings, ...values) {
   return { strings, values };
 }
 
-args`Hello ${'Arguments'}!`
+var value = 'Arguments';
+
+args`Hello ${value}!`
 ```
 
 <div class="fragment">
@@ -93,7 +95,9 @@ function noop(strings, ...values) {
   return result;
 }
 
-noop`Hello ${'No Operation'}!`
+var value = 'No Operation';
+
+noop`Hello ${value}!`
 ```
 
 <div class="fragment">

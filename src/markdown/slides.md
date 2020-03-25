@@ -16,7 +16,7 @@ title-slide-attributes:
 
 <div class="chapter">
   <h3>I</h3>
-  What Are Tagged Template Strings?
+  What Are Template Tags?
 </div>
 
 #
@@ -51,7 +51,7 @@ var query = gql`{
 
 <div class="chapter">
   <h3>II</h3>
-  How Do Tagged Template Strings Work?
+  How Do Template Tags Work?
 </div>
 
 #
@@ -106,7 +106,7 @@ noop`Hello ${'World'}!`
 
 <div class="chapter">
   <h3>III</h3>
-  What Else Can We Do <br>with Tagged Template Strings?
+  What Else Can We Do <br>with Template Tags?
 </div>
 
 #

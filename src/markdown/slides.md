@@ -271,6 +271,6 @@ function p(strings, ...promises) {
 <div class="chapter">
 Thank you for your time.
 
-You can find more examples, the slides and the transcript for this talk at
+You can find more examples, these slides and the transcript for this talk at
 [git.io/JvSGK](https://git.io/JvSGK).
 </div>

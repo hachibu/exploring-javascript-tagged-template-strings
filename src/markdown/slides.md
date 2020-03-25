@@ -6,6 +6,7 @@ author: >
     [\@20percentempty](https://twitter.com/20percentempty) -
     [hachibu.net](https://hachibu.net)
   </p>
+background-image: "images/background.jpeg"
 ---
 
 # { data-background-color="#24292e" }

@@ -45,9 +45,16 @@ gulp.task('build:css', () => {
     pipe(gulp.dest('docs/slides'));
 });
 
+gulp.task('build:images', () => {
+  return gulp.
+    src('src/**/*.jpeg').
+    pipe(gulp.dest('docs/slides'));
+});
+
 gulp.task('build', gulp.parallel(
   'build:reveal.js',
   'build:css',
+  'build:images',
   'build:slides.md',
   'build:html'
 ));

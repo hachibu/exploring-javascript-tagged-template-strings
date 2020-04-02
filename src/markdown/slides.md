@@ -2,8 +2,6 @@
 title: Exploring<br>JavaScript<br>Template Tags
 author: Raymond Sohn
 date: >-
-  [hachibu.net](https://hachibu.net)
-  ·
   [\@20percentempty](https://twitter.com/20percentempty)
 theme: white
 title-slide-attributes:

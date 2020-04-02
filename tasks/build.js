@@ -41,7 +41,7 @@ gulp.task('build:html', () => {
 
 gulp.task('build:images', () => {
   return gulp.
-    src('src/images/*.jpeg').
+    src('src/images/*.{jpg,jpeg,png}').
     pipe(gulp.dest('docs/slides/images'));
 });
 

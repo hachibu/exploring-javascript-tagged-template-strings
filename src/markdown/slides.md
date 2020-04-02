@@ -1,13 +1,12 @@
 ---
-title: Exploring<br>JavaScript<br>Template Tags
+title: Exploring JavaScript<br>Template Tags
 author: Raymond Sohn
 date: >-
   [\@20percentempty](https://twitter.com/20percentempty)
 theme: white
 title-slide-attributes:
-    data-background-image: images/background.jpeg
+    data-background-image: images/title-slide-background.png
     data-background-size: cover
-    data-background-opacity: 0.5
 ---
 
 # { data-background-color="#24292e" }

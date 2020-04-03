@@ -1,20 +1,22 @@
-# Exploring JavaScript Template Tags
-
----
-
 ## Title Slide
 
-= Thank and acknowledge host and other speakers
-- Briefly introduce yourself and the topic of the talk.
+Before I begin, I'd like to regale you with a joke that I wrote specifically
+for this talk.
 
-Today, we'll be exploring JavaScript Tagged Template Strings. We'll dive into
+A torus and a doughnut are sitting next to each other in a bar. The torus says
+to the doughnut, "Excuse me, I couldn't help but notice that you have a very
+solid body." And the doughnut replies, "Why thank you, I toroidally agree."
+
+Hello, my name is Raymond Sohn and I'm currently an engineer at Wootric which
+is a platform for gathering and analyzing customer feedback. Tonight, we'll be
+exploring JavaScript Template Tags. The objectives of this talk are to show you:
 what they are, how they work and what they are capable of.
 
 ---
 
 ## Slide 1
 
-What are tagged template strings?
+What are template tags?
 
 Explain what tagged template strings are in a nutshell and how they are composed
 of a function and a template string.
@@ -65,6 +67,6 @@ What else can we do with tagged template strings?
 
 ---
 
-### Slide 7
+## Slide 7
 
 ...

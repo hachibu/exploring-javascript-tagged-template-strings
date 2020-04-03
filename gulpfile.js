@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+var gulp = require('gulp');
 
 require('./tasks/clean');
 require('./tasks/build');

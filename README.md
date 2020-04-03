@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/hachibu/exploring-javascript-template-tags.svg?branch=master)](https://travis-ci.com/hachibu/exploring-javascript-template-tags)
 
 ### [Slides](https://hachibu.github.io/exploring-javascript-template-tags/slides/index.html)
+### [Transcript](https://hachibu.github.io/exploring-javascript-template-tags/transcript.html)
 
 ### Examples
 

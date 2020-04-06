@@ -12,7 +12,46 @@ title-slide-attributes:
 # { data-background-color="#24292e" }
 
 <div class="chapter">
-  <h3>I</h3>
+  <h3>Prologue</h3>
+  What Are Template Strings?
+</div>
+
+#
+
+Before
+
+```javascript
+var value = 'Regular String';
+
+console.log('Hello ' + value + '!');
+```
+
+<div class="fragment">
+```javascript
+'Hello Regular String!'
+```
+</div>
+
+<div class="fragment">
+After
+
+```javascript
+var value = 'Template String';
+
+console.log(`Hello ${value}!`);
+```
+</div>
+
+<div class="fragment">
+```javascript
+'Hello Template String!'
+```
+</div>
+
+# { data-background-color="#24292e" }
+
+<div class="chapter">
+  <h3>1</h3>
   What Are Tagged Template Strings?
 </div>
 
@@ -47,7 +86,7 @@ var query = gql`{
 # { data-background-color="#24292e" }
 
 <div class="chapter">
-  <h3>II</h3>
+  <h3>2</h3>
   How Do Tagged Template Strings Work?
 </div>
 
@@ -106,7 +145,7 @@ noop`Hello ${value}!`
 # { data-background-color="#24292e" }
 
 <div class="chapter">
-  <h3>III</h3>
+  <h3>3</h3>
   What Else Can We Do<br>
   With Tagged Template Strings?
 </div>
@@ -275,8 +314,8 @@ function p(strings, ...promises) {
 # { data-background-color="#24292e" }
 
 <div class="chapter">
-Thank you for your time.
-
-You can find more examples, the slides and the transcript for this talk at
-[git.io/JvSGK](https://git.io/JvSGK).
+  <h3>Epilogue</h3>
+  Thank you for your time.
+  You can find more examples, the slides and the transcript for this talk at
+  [git.io/JvSGK](https://git.io/JvSGK).
 </div>

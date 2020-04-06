@@ -14,6 +14,7 @@ gulp.task('build:slides', () => {
     ext: '.html',
     args: [
       '-s',
+      '--slide-level=2',
       '--include-in-header=src/slides/partials/header.html',
       '--include-after-body=src/slides/partials/footer.html'
     ]

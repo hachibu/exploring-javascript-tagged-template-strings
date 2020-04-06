@@ -1,4 +1,4 @@
-# Exploring JavaScript Template Tags
+# Exploring JavaScript Tagged Template Strings
 
 [![Build Status](https://travis-ci.com/hachibu/exploring-javascript-template-tags.svg?branch=master)](https://travis-ci.com/hachibu/exploring-javascript-template-tags)
 

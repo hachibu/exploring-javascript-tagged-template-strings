@@ -14,8 +14,8 @@ gulp.task('build:slides', () => {
     ext: '.html',
     args: [
       '-s',
-      '--include-in-header=src/slides/header.html',
-      '--include-after-body=src/slides/footer.html'
+      '--include-in-header=src/slides/partials/header.html',
+      '--include-after-body=src/slides/partials/footer.html'
     ]
   });
 

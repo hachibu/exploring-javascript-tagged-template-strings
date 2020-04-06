@@ -1,5 +1,5 @@
 ---
-title: Exploring JavaScript<br>Template Tags
+title: Exploring JavaScript Tagged Template Strings
 author: Raymond Sohn
 date: >-
   [\@20percentempty](https://twitter.com/20percentempty)
@@ -13,7 +13,7 @@ title-slide-attributes:
 
 <div class="chapter">
   <h3>I</h3>
-  What Are Template Tags?
+  What Are Tagged Template Strings?
 </div>
 
 #
@@ -48,7 +48,7 @@ var query = gql`{
 
 <div class="chapter">
   <h3>II</h3>
-  How Do Template Tags Work?
+  How Do Tagged Template Strings Work?
 </div>
 
 #
@@ -107,16 +107,17 @@ noop`Hello ${value}!`
 
 <div class="chapter">
   <h3>III</h3>
-  What Else Can Template Tags Do?
+  What Else Can We Do<br>
+  With Tagged Template Strings?
 </div>
 
 #
 
 <div class="fragment--align-left">
-__Embedding Domain Specific Languages__
+__Embed Domain Specific Languages__
 
 - Build single file web components with embedded HTML and CSS.
-- Port the backticks syntax from Bash to execute shell commands.
+- Port Bash's backticks syntax to execute shell commands.
 </div>
 
 <div class="fragment fragment--align-left">

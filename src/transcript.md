@@ -4,8 +4,9 @@ Before I begin, I'd like to regale you with a joke that I wrote specifically
 for this talk.
 
 A torus and a doughnut are sitting next to each other in a bar. The torus says
-to the doughnut, "Excuse me, I couldn't help but notice that you have a very
-solid body." And the doughnut replies, "Why thank you, I toroidally agree."
+to the doughnut, "Excuse me, I've been waffling over whether or not to approach
+you, but I couldn't help but notice that you have a very solid body." And the
+doughnut says, "Why thank you, I toroidally agree."
 
 Hello, my name is Raymond Sohn and I'm currently an engineer at Wootric which
 is a platform for gathering and analyzing customer feedback. Tonight, we'll be

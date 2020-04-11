@@ -1,9 +1,9 @@
 # Exploring JavaScript Tagged Template Strings
 
-[![Build Status](https://travis-ci.com/hachibu/exploring-javascript-template-tags.svg?branch=master)](https://travis-ci.com/hachibu/exploring-javascript-template-tags)
+[![Build Status](https://travis-ci.com/hachibu/exploring-javascript-tagged-template-strings.svg?branch=master)](https://travis-ci.com/hachibu/exploring-javascript-tagged-template-strings)
 
-### [Slides](https://hachibu.github.io/exploring-javascript-template-tags/slides/index.html)
-### [Transcript](https://hachibu.github.io/exploring-javascript-template-tags/transcript.html)
+### [Slides](https://hachibu.github.io/exploring-javascript-tagged-template-strings/slides/index.html)
+### [Transcript](https://hachibu.github.io/exploring-javascript-tagged-template-strings/transcript.html)
 
 ### Examples
 

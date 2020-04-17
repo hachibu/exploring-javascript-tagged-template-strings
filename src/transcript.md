@@ -1,3 +1,13 @@
+# Notes
+- Good pace. I seemed calm and cool. So, take a deep breath.
+- Timing is good but double check length.
+- Look at camera.
+- Use the props.
+- Mention useful and useless description in the beginning.
+- Make a joke about the dangers of executing shell commands?
+- Ask questions to reengage audience. Introduction is strong but you need some
+  questions for later on.
+
 ## Slide 1
 
 Hello, my name is Raymond Sohn and I'm currently an engineer at Wootric which

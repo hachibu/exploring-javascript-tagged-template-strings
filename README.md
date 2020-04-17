@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.com/hachibu/exploring-javascript-tagged-template-strings.svg?branch=master)](https://travis-ci.com/hachibu/exploring-javascript-tagged-template-strings)
 
 ### [Slides](https://hachibu.github.io/exploring-javascript-tagged-template-strings/slides/index.html)
-### [Transcript](https://hachibu.github.io/exploring-javascript-tagged-template-strings/transcript.html)
 
 ### Examples
 

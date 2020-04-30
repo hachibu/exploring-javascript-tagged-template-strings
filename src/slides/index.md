@@ -172,6 +172,12 @@ __Async Programming__
 - Promise-aware template strings.
 </div>
 
+<div class="fragment fragment--align-left">
+__Quantum Computing__
+
+- Simulate quantum circuits.
+</div>
+
 #
 
 Single File Web Components with LitElement
@@ -310,6 +316,25 @@ function p(strings, ...promises) {
   });
 }
 ```
+
+#
+
+Simulating Quantum Circuits with Q.js
+
+```javascript
+Q`
+  H  X#0
+  I  X#1
+`
+```
+
+#
+
+![](images/q.js-screenshot.png)
+
+<small>
+  [quantumjavascript.app/playground.html](https://quantumjavascript.app/playground.html)
+</small>
 
 # { data-background-color="#24292e" }
 

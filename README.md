@@ -28,3 +28,6 @@
 
 5. Async Programming
    - [promise](/src/examples/5-async-programming/promise.js)
+
+6. Quantum Computing
+   - [Quantum Circuit Simulator](https://quantumjavascript.app/#text-as-input)

@@ -1,31 +1,20 @@
-# Notes
-- Good pace. I seemed calm and cool. So, take a deep breath.
-- Timing is good but double check length.
-- Look at camera.
-- Use the props.
-- Mention useful and useless description in the beginning.
-- Make a joke about the dangers of executing shell commands?
-- Ask questions to reengage audience. Introduction is strong but you need some
-  questions for later on.
-
 ## Slide 1
 
-Hello, my name is Raymond Sohn and I'm currently an engineer at Wootric which
-is a platform for gathering and analyzing customer feedback. Tonight, we'll be
-exploring JavaScript Tagged Template Strings. By the end of this talk you'll
-know what they are, how they work and what they are capable of.
+Hello, my name is Raymond Sohn 
 
-Before we continue, I think it's worth explaining what template strings are
-because tagged template strings are a more specialized version of template
-strings. In order to understand tagged template strings, you need to understand
-template strings.
+my pronouns are he/him
+I write JavaScript at Wootric, which is a
+platform for gathering and analyzing customer feedback. Tonight, we'll be
+exploring JavaScript Tagged Template Strings. By the end of this talk
+(hopefully) you'll know what they are, how they works and some of the useful
+and useless things you can do with them.
 
 # Slide 2
 
-What is a template string?
+What are template strings?
 
-Template strings are a fairly recent addition to the JavaScript programming
-language that allows us to mix variables into strings.
+Template strings are a fairly recent addition to JavaScript that allows us to
+mix variables into strings.
 
 ## Slide 3
 
@@ -48,15 +37,15 @@ Take the paper out of the variable box, and slot the value into the hole.*
 
 What are tagged template strings?
 
-This is a terrible analogy (then why even mention it?), but a tagged template
-string is like a burrito (okay, I'm listening).
-
-*Demonstrate by wrapping previous prop in a tortilla with a piece of paper
-that says function on it.*
+This is a terrible analogy, but a tagged template
+string is like a burrito. Stay with me...
 
 Essentially, a burrito is a bunch of familiar ingredients wrapped in a tortilla
 to form something new and delicious. A tagged template string is basically a
 burrito made out of a function and a template string.
+
+*Demonstrate by wrapping previous prop in a tortilla with a piece of paper
+that says function on it.*
 
 Let's take a look at a real-life example of a tagged template string.
 
